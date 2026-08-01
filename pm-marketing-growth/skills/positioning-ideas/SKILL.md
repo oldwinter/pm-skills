@@ -59,3 +59,10 @@ For each idea, provide:
 
 - [Product Management vs. Product Marketing vs. Product Growth 101](https://www.productcompass.pm/p/product-management-vs-product-marketing)
 - [How to Design a Value Proposition Customers Can't Resist?](https://www.productcompass.pm/p/how-to-design-value-proposition-template)
+## 中文执行导读
+
+这是 `positioning-ideas` 的中文 runtime 入口。
+
+中文产品管理请求命中本 skill 时，先确认目标产出和适用的 PM framework，再按下方上游流程执行。输出说明使用简体中文；framework 名称、公式、字段、命令、路径、模板结构、引用和代码保持原样，法律与合规内容不替代专业意见。
+
+# Positioning Ideas

@@ -14,6 +14,15 @@
 
 Designed for Claude Code and Cowork. Skills compatible with other AI assistants.
 
+## 中文版安装（oldwinter fork）
+
+这是上游 `phuryn/pm-skills` 的中文化 fork。安装后，9 个 PM plugin 会从中文 fork 读取 68 个带中文执行导读的 `SKILL.md` runtime 入口。
+
+```text
+claude plugin marketplace add oldwinter/pm-skills
+codex plugin marketplace add oldwinter/pm-skills
+```
+
 ## Start Here
 
 New idea? → `/discover`  
