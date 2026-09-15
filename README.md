@@ -8,7 +8,7 @@
 
 # PM Skills Marketplace: The AI Operating System for Better Product Decisions
 
-> 68 PM skills and 42 chained workflows across 9 plugins. Claude Code, Cowork, and more. From discovery to strategy, execution, launch, growth, and shipping AI-built code. 
+> 69 PM skills and 42 chained workflows across 9 plugins. Claude Code, Cowork, and more. From discovery to strategy, execution, launch, growth, and shipping AI-built code.
 
 ![PM Skills marketplace: skills, commands, and all 9 plugins at a glance](.docs/images/plugins.png)
 
@@ -16,7 +16,7 @@ Designed for Claude Code and Cowork. Skills compatible with other AI assistants.
 
 ## 中文版安装（oldwinter fork）
 
-这是上游 `phuryn/pm-skills` 的中文化 fork。安装后，9 个 PM plugin 会从中文 fork 读取 68 个带中文执行导读的 `SKILL.md` runtime 入口。
+这是上游 `phuryn/pm-skills` 的中文化 fork。安装后，9 个 PM plugin 会从中文 fork 读取 69 个带中文执行导读的 `SKILL.md` runtime 入口。
 
 ```text
 claude plugin marketplace add oldwinter/pm-skills
@@ -447,7 +447,7 @@ Commands:
 </details>
 
 <details>
-<summary><strong>9. pm-ai-shipping</strong> — AI Shipping Kit: document a vibe-coded app, audit security and performance, map test coverage, compile a shipping packet (2 skills, 5 commands)</summary>
+<summary><strong>9. pm-ai-shipping</strong> — AI Shipping Kit: document a vibe-coded app, review it for correctness, security and performance defects, map test coverage, compile a shipping packet (3 skills, 5 commands)</summary>
 
 For PMs and founders accountable for AI-built code. AI agents write code fast but leave no record of *intent* — what the system should do, who may do what, where the secrets live, which rules are actually verified. This kit restores reviewability: it documents the system, then audits the gap between what the docs say and what the code actually does — the class of bug generic scanners miss.
 

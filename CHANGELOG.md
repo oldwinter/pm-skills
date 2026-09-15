@@ -1,5 +1,14 @@
 # Changelog
 
+## Unreleased
+
+### pm-ai-shipping
+
+- Added the **code-review** skill: correctness is the core engine, with performance and security as optional sub-cases of it rather than separate methods. It anchors on agreements between participants across a boundary — the defects that stay invisible file-by-file because each side reads as reasonable alone — forces a violating execution, and refutes every candidate before reporting.
+- Added a correctness taxonomy reference built from real fix history, plus performance and security reference sheets the same engine reads.
+- `/ship-check` gained a correctness review as Step 3, before the security and performance audits, and an independent unsteered pass by a second model as Step 6.
+- `/security-audit-static` gained an OWASP Top 10 coverage backstop: every surviving finding is mapped to a category, and any category with zero findings is flagged "not covered — double-check" rather than silently passing. It is a coverage check, not a mandate to invent findings.
+
 ## v2.1.0 — 2026-07-03
 
 ### pm-ai-shipping
