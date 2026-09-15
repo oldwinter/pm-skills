@@ -203,6 +203,20 @@ class TestReadmeCounts(unittest.TestCase):
                 )
 
 
+class TestCheckoutIdentity(unittest.TestCase):
+    """Agent guidance must name this fork and the upstream repo."""
+
+    def test_claude_md_names_fork_and_upstream(self):
+        text = (ROOT / "CLAUDE.md").read_text(encoding="utf-8")
+        self.assertIn("oldwinter/pm-skills", text)
+        self.assertIn("phuryn/pm-skills", text)
+        self.assertRegex(
+            text,
+            r"oldwinter/pm-skills[\s\S]{0,200}phuryn/pm-skills",
+            "Overview should name this checkout before the upstream repo",
+        )
+
+
 class TestCommandReferences(unittest.TestCase):
     """Every /plugin:command mentioned in a plugin README must exist on disk."""
 
