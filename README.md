@@ -25,6 +25,8 @@ codex plugin marketplace add oldwinter/pm-skills
 
 ## Start Here
 
+These `/command`s need this fork's marketplace first (`oldwinter/pm-skills`). Install in [Installation](#installation), then:
+
 New idea? → `/discover`  
 Need strategic clarity? → `/strategy`  
 Writing a PRD? → `/write-prd`  
@@ -59,12 +61,14 @@ Commands are designed to flow into each other, matching the PM workflow. After a
 
 ## Installation
 
+This checkout is the Chinese fork. The primary marketplace slug is `oldwinter/pm-skills` so plugins load the Chinese `SKILL.md` runtimes. The English upstream is an optional alternative below.
+
 ### Claude Cowork (recommended for non-developers)
 
 1. Open **Customize** (bottom-left)
 2. Go to **Browse plugins** → **Personal** → **+**
 3. Select **Add marketplace from GitHub**
-4. Enter: `phuryn/pm-skills`
+4. Enter: `oldwinter/pm-skills`
 
 All 9 plugins install automatically. You get both commands (`/discover`, `/strategy`, etc.) and skills.
 
@@ -74,7 +78,7 @@ All 9 plugins install automatically. You get both commands (`/discover`, `/strat
 
 ```bash
 # Step 1: Add the marketplace
-claude plugin marketplace add phuryn/pm-skills
+claude plugin marketplace add oldwinter/pm-skills
 
 # Step 2: Install individual plugins
 claude plugin install pm-toolkit@pm-skills
@@ -94,7 +98,7 @@ Codex reads the same plugin marketplace file as Claude Code, so you can install 
 
 ```bash
 # Step 1: Add the marketplace
-codex plugin marketplace add phuryn/pm-skills
+codex plugin marketplace add oldwinter/pm-skills
 
 # Step 2: Install the plugins you want
 codex plugin add pm-toolkit@pm-skills
@@ -119,6 +123,17 @@ codex plugin add pm-ai-shipping@pm-skills
 > Read the command files in the pm-execution plugin and create equivalent Codex skills for the workflows I use most often.
 
 This is a best-effort, model-driven conversion (some Claude-specific command syntax won't translate), but it's a quick way to get the guided workflows on Codex without leaving the CLI.
+
+### English upstream (optional)
+
+Use this only if you want the original English marketplace instead of this Chinese fork:
+
+```bash
+claude plugin marketplace add phuryn/pm-skills
+codex plugin marketplace add phuryn/pm-skills
+```
+
+In Cowork, enter `phuryn/pm-skills` at **Add marketplace from GitHub**.
 
 ### Other AI assistants (skills only)
 
