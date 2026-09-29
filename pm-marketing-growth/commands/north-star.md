@@ -5,6 +5,8 @@ argument-hint: "<product or business>"
 
 # /north-star -- North Star Metric Definition
 
+Treat **$ARGUMENTS** as the requested subject. If it is empty, use the active conversation or repository context.
+
 Identify the single metric that best captures the value your product delivers, plus the input metrics that drive it. Classifies your business game and validates against proven criteria.
 
 ## Invocation

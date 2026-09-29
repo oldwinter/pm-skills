@@ -12,7 +12,9 @@ What this locks in:
 
 import json
 import re
+import tempfile
 import unittest
+from collections import Counter
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -57,7 +59,12 @@ def latest_changelog_version() -> str:
 
 class TestMarketplaceList(unittest.TestCase):
     def test_marketplace_lists_exactly_the_plugins_on_disk(self):
-        listed = {p["name"] for p in marketplace()["plugins"]}
+        listed_names = [p["name"] for p in marketplace()["plugins"]]
+        duplicates = sorted(
+            name for name, count in Counter(listed_names).items() if count > 1
+        )
+        self.assertEqual(duplicates, [], f"duplicate marketplace plugins: {duplicates}")
+        listed = set(listed_names)
         on_disk = {p.name for p in plugin_dirs()}
         self.assertEqual(
             listed,
@@ -73,6 +80,40 @@ class TestMarketplaceList(unittest.TestCase):
                 f"./{p['name']}",
                 f"plugin {p['name']} has source {p['source']}",
             )
+
+    def test_duplicate_marketplace_names_are_rejected(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            for name in ("plugin-a", "plugin-b"):
+                manifest = root / name / ".claude-plugin" / "plugin.json"
+                manifest.parent.mkdir(parents=True)
+                manifest.write_text("{}", encoding="utf-8")
+            fixture = root / "marketplace.json"
+            fixture.write_text(
+                json.dumps(
+                    {
+                        "plugins": [
+                            {"name": "plugin-a"},
+                            {"name": "plugin-b"},
+                            {"name": "plugin-b"},
+                        ]
+                    }
+                ),
+                encoding="utf-8",
+            )
+            old_root, old_marketplace = ROOT, MARKETPLACE
+            try:
+                globals()["ROOT"], globals()["MARKETPLACE"] = root, fixture
+                duplicate_check = TestMarketplaceList(
+                    "test_marketplace_lists_exactly_the_plugins_on_disk"
+                )
+                with self.assertRaises(AssertionError):
+                    duplicate_check.test_marketplace_lists_exactly_the_plugins_on_disk()
+            finally:
+                globals()["ROOT"], globals()["MARKETPLACE"] = (
+                    old_root,
+                    old_marketplace,
+                )
 
 
 class TestVersionSync(unittest.TestCase):

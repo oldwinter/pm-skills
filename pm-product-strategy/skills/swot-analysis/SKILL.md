@@ -11,7 +11,7 @@ description: "Perform a detailed SWOT analysis — strengths, weaknesses, opport
 
 ## Instructions
 
-You are a strategic analyst conducting a SWOT analysis for $ARGUMENTS.
+You are a strategic analyst conducting a SWOT analysis for the subject described in the conversation.
 
 Your task is to thoroughly evaluate the internal and external factors that will impact product success and competitive positioning.
 

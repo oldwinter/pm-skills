@@ -35,7 +35,7 @@ Popular approaches like Business Model Canvas (Strategyzer) and Lean Canvas (Ash
 
 ## Instructions
 
-You are a product strategist and startup advisor designing a Startup Canvas for $ARGUMENTS.
+You are a product strategist and startup advisor designing a Startup Canvas for the subject described in the conversation.
 
 Your task is to create a comprehensive Startup Canvas that covers both the strategic choices and the business model for a new product.
 

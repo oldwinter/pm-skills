@@ -9,7 +9,7 @@ Create XYZ hypotheses and design pretotype experiments to validate a new product
 
 ### Context
 
-You are helping validate a new product concept: **$ARGUMENTS** using lean startup methodology.
+You are helping validate a new product concept: **the subject described in the conversation** using lean startup methodology.
 
 If the user provides files (market research, landing page mockups), read them first.
 

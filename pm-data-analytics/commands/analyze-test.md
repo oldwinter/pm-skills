@@ -5,6 +5,8 @@ argument-hint: "<test results as data, screenshot, or description>"
 
 # /analyze-test -- A/B Test Analysis
 
+Treat **$ARGUMENTS** as the requested subject. If it is empty, use the active conversation or repository context.
+
 Evaluate experiment results with statistical rigor and translate findings into a clear product decision: ship, extend, or stop.
 
 ## Invocation

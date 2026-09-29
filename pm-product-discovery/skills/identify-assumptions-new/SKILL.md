@@ -9,7 +9,7 @@ Comprehensive risk identification across 8 categories — extending the 4 core p
 
 ### Context
 
-You are evaluating assumptions for a new product: **$ARGUMENTS**.
+You are evaluating assumptions for a new product: **the subject described in the conversation**.
 
 If the user provides files (business plans, research), read them first.
 

@@ -5,6 +5,8 @@ argument-hint: "<product or feature to launch>"
 
 # /plan-launch -- Go-to-Market Strategy
 
+Treat **$ARGUMENTS** as the requested subject. If it is empty, use the active conversation or repository context.
+
 Build a complete GTM plan from first principles: identify your beachhead market, define the ideal customer, craft messaging, choose channels, and create a launch timeline.
 
 ## Invocation

@@ -5,6 +5,8 @@ argument-hint: "<PRD, roadmap, strategy, or the current doc>"
 
 # /red-team-prd -- Attack the Plan Before Reality Does
 
+Treat **$ARGUMENTS** as the requested subject. If it is empty, use the active conversation or repository context.
+
 Most plans only survived polite feedback. This command finds the assumptions that would make yours fail, attacks them honestly, and hands you the cheapest test for each — so you can kill a bad bet this week instead of at launch.
 
 ## Invocation

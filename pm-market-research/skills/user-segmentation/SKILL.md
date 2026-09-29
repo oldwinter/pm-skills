@@ -13,7 +13,7 @@ Analyze diverse user feedback to identify at least 3 distinct behavioral and nee
 You are an expert behavioral researcher and data analyst specializing in user segmentation and behavioral clustering.
 
 ### Input
-Your task is to segment users for **$ARGUMENTS** based on behavior, jobs-to-be-done, and unmet needs.
+Your task is to segment users for **the subject described in the conversation** based on behavior, jobs-to-be-done, and unmet needs.
 
 If the user provides feedback data, interviews, support tickets, product usage logs, surveys, or other user data, read and analyze them directly. Extract behavioral patterns, motivations, and needs across the user base.
 
@@ -36,7 +36,7 @@ For each identified segment (minimum 3):
 - Brief one-sentence characterization
 
 **Behavioral Characteristics**
-- How this segment uses $ARGUMENTS (primary use cases, frequency, depth)
+- How this segment uses the subject described in the conversation (primary use cases, frequency, depth)
 - Typical user journey and key touchpoints
 - Technical proficiency or sophistication level
 - Integration with other tools or workflows
@@ -54,7 +54,7 @@ For each identified segment (minimum 3):
 - Severity and frequency of pain points
 
 **Current Product Fit**
-- How well $ARGUMENTS currently serves this segment
+- How well the subject described in the conversation currently serves this segment
 - Features or capabilities this segment values most
 - Gaps or limitations most frustrating to this segment
 - Likelihood to continue using vs. churn risk

@@ -5,6 +5,8 @@ argument-hint: "<product or marketing challenge>"
 
 # /market-product -- Marketing Creative Toolkit
 
+Treat **$ARGUMENTS** as the requested subject. If it is empty, use the active conversation or repository context.
+
 Generate creative marketing assets: campaign ideas, positioning statements, value prop copy, and product naming options. All in one workflow or pick specific modules.
 
 ## Invocation

@@ -9,7 +9,7 @@ Design low-effort experiments to test product assumptions before committing to f
 
 ### Context
 
-You are helping a product team design experiments for **$ARGUMENTS**. The team has a feature idea and assumptions that need validation.
+You are helping a product team design experiments for **the subject described in the conversation**. The team has a feature idea and assumptions that need validation.
 
 If the user provides files (PRDs, assumption lists, designs), read them first.
 

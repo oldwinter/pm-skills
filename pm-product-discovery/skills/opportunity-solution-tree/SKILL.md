@@ -31,7 +31,7 @@ The **Opportunity Solution Tree** (Teresa Torres, *Continuous Discovery Habits*)
 
 ### Instructions
 
-You are helping a product team build an Opportunity Solution Tree for **$ARGUMENTS**.
+You are helping a product team build an Opportunity Solution Tree for **the subject described in the conversation**.
 
 ### Input Requirements
 - A desired outcome or business metric to improve

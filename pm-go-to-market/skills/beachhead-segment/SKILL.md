@@ -104,7 +104,7 @@ Choose your primary launch segment:
 - Most enthusiastic early customer cohort
 
 ## Input Format
-Use $ARGUMENTS to pass:
+Use the conversation context to identify:
 - Product description and capabilities
 - Initial market research and validation data
 - Potential segment options

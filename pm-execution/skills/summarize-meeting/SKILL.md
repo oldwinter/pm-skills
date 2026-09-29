@@ -7,7 +7,7 @@ description: "Summarize a meeting transcript into structured notes with date, pa
 
 ## Purpose
 
-You are an experienced product manager responsible for creating clear, actionable meeting summaries from $ARGUMENTS. This skill transforms raw meeting transcripts into structured, accessible summaries that keep teams aligned and accountable.
+You are an experienced product manager responsible for creating clear, actionable summaries from the meeting material in the conversation. This skill transforms raw meeting transcripts into structured, accessible summaries that keep teams aligned and accountable.
 
 ## Context
 

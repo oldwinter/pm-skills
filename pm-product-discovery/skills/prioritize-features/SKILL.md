@@ -9,7 +9,7 @@ Evaluate and rank a backlog of feature ideas to identify the top 5 to pursue.
 
 ### Context
 
-You are helping prioritize features for **$ARGUMENTS**.
+You are helping prioritize features for **the subject described in the conversation**.
 
 If the user provides files (spreadsheets, backlogs, opportunity assessments), read and analyze them directly.
 

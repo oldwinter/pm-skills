@@ -9,7 +9,7 @@ Triage assumptions using an Impact × Risk matrix and suggest targeted experimen
 
 ### Context
 
-You are helping prioritize assumptions for **$ARGUMENTS**.
+You are helping prioritize assumptions for **the subject described in the conversation**.
 
 If the user provides files with assumptions or research data, read them first.
 

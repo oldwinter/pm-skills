@@ -60,12 +60,14 @@ class C:
 
 def parse_yaml_frontmatter(content: str) -> Optional[dict]:
     """Extract YAML frontmatter from a markdown file (between --- markers)."""
-    if not content.startswith("---"):
+    lines = content.splitlines()
+    if not lines or lines[0] != "---":
         return None
-    end = content.find("---", 3)
-    if end == -1:
+    try:
+        end = lines.index("---", 1)
+    except ValueError:
         return None
-    fm_text = content[3:end].strip()
+    fm_text = "\n".join(lines[1:end])
     # Simple YAML parser for flat key-value pairs
     result = {}
     for line in fm_text.split("\n"):
@@ -122,25 +124,31 @@ def validate_manifest(plugin_dir: str) -> ValidationResult:
         return result
 
     try:
-        with open(pj_path, "r") as f:
+        with open(pj_path, "r", encoding="utf-8") as f:
             data = json.load(f)
     except json.JSONDecodeError as e:
         result.error(f"Invalid JSON in plugin.json: {e}")
+        return result
+
+    if not isinstance(data, dict):
+        result.error("plugin.json must contain a JSON object")
         return result
 
     # Required fields
     for field in REQUIRED_MANIFEST_FIELDS:
         if field not in data or not data[field]:
             result.error(f"Missing required field: {field}")
+        elif not isinstance(data[field], str):
+            result.error(f"Required field '{field}' must be a string")
 
     # Name must match directory name
     dir_name = os.path.basename(plugin_dir)
-    if data.get("name") and data["name"] != dir_name:
+    if isinstance(data.get("name"), str) and data["name"] != dir_name:
         result.error(f"Name mismatch: plugin.json says '{data['name']}' but directory is '{dir_name}'")
 
     # Version format
     version = data.get("version", "")
-    if version and not re.match(r'^\d+\.\d+\.\d+$', version):
+    if isinstance(version, str) and version and not re.match(r'^\d+\.\d+\.\d+$', version):
         result.warn(f"Version '{version}' doesn't follow semver (x.y.z)")
 
     # Recommended fields
@@ -169,7 +177,7 @@ def validate_manifest(plugin_dir: str) -> ValidationResult:
 
     # Description length check
     desc = data.get("description", "")
-    if desc and len(desc) < 20:
+    if isinstance(desc, str) and desc and len(desc) < 20:
         result.warn(f"Description is very short ({len(desc)} chars)")
 
     result.note(f"Version: {version}")
@@ -190,6 +198,11 @@ def validate_skill(skill_dir: str) -> ValidationResult:
 
     with open(skill_md, "r", encoding="utf-8") as f:
         content = f.read()
+
+    if "$ARGUMENTS" in content:
+        result.error(
+            "Skills must read conversation context and cannot contain $ARGUMENTS"
+        )
 
     # Frontmatter check
     fm = parse_yaml_frontmatter(content)
@@ -246,6 +259,13 @@ def validate_command(cmd_path: str) -> ValidationResult:
         if field not in fm or not fm[field]:
             result.error(f"Missing required frontmatter field: {field}")
 
+    argument_count = content.count("$ARGUMENTS")
+    if argument_count != 1:
+        result.error(
+            "Command must contain exactly one $ARGUMENTS placeholder; "
+            f"found {argument_count}"
+        )
+
     # Description quality
     desc = fm.get("description", "")
     if desc and len(desc) < 10:
@@ -265,7 +285,7 @@ def validate_readme(plugin_dir: str) -> ValidationResult:
     readme_path = os.path.join(plugin_dir, "README.md")
 
     if not os.path.isfile(readme_path):
-        result.warn("Missing README.md")
+        result.error("Missing README.md")
         return result
 
     with open(readme_path, "r", encoding="utf-8") as f:
@@ -283,6 +303,7 @@ def validate_readme(plugin_dir: str) -> ValidationResult:
 def validate_cross_references(plugin_dir: str, skill_names: list[str]) -> ValidationResult:
     """Check that commands reference skills that actually exist in this plugin."""
     result = ValidationResult()
+    plugin_name = os.path.basename(plugin_dir)
     cmds_dir = os.path.join(plugin_dir, "commands")
 
     if not os.path.isdir(cmds_dir):
@@ -299,7 +320,15 @@ def validate_cross_references(plugin_dir: str, skill_names: list[str]) -> Valida
         refs = re.findall(r'\*\*(\w[\w-]+)\*\*\s+skill', content)
         for ref in refs:
             if ref not in skill_names:
-                result.warn(f"Command {cmd_file} references skill '{ref}' not found in this plugin")
+                result.error(f"Command {cmd_file} references skill '{ref}' not found in this plugin")
+
+        command_refs = set(re.findall(r'/([\w-]+):([\w-]+)', content))
+        for ref_plugin, ref_command in sorted(command_refs):
+            if ref_plugin != plugin_name:
+                result.error(
+                    f"Command {cmd_file} hard-references another plugin: "
+                    f"/{ref_plugin}:{ref_command}"
+                )
 
     return result
 

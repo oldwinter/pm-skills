@@ -122,7 +122,7 @@ Synthesize specific problem areas:
 - Success criteria for solution
 
 ## Input Format
-Use $ARGUMENTS to pass:
+Use the conversation context to identify:
 - Research data (surveys, interviews, transcripts)
 - Customer success/metrics data
 - Product usage analytics

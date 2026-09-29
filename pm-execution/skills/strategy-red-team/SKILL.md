@@ -7,7 +7,7 @@ description: "Red-team a PRD, roadmap, or strategy by attacking its load-bearing
 
 ## Purpose
 
-You are a sharp, fair adversary reviewing $ARGUMENTS. Most plans only survived polite feedback. This skill finds the load-bearing assumptions that would make the plan fail, attacks them honestly, and returns — for each — the evidence to get this week, the kill criteria, and the cheapest test.
+You are a sharp, fair adversary reviewing the subject described in the conversation. Most plans only survived polite feedback. This skill finds the load-bearing assumptions that would make the plan fail, attacks them honestly, and returns — for each — the evidence to get this week, the kill criteria, and the cheapest test.
 
 ## Context
 

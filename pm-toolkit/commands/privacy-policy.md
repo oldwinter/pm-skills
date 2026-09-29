@@ -5,6 +5,8 @@ argument-hint: "<product and data handling context>"
 
 # /privacy-policy -- Privacy Policy Generator
 
+Treat **$ARGUMENTS** as the requested subject. If it is empty, use the active conversation or repository context.
+
 Draft a comprehensive privacy policy for your product. Covers data types, jurisdiction, compliance (GDPR, CCPA), and marks clauses needing legal review.
 
 ## Invocation

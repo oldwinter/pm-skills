@@ -5,6 +5,8 @@ argument-hint: "<transcript or meeting notes>"
 
 # /meeting-notes -- Meeting Summary
 
+Treat **$ARGUMENTS** as the requested subject. If it is empty, use the active conversation or repository context.
+
 Transform a raw meeting transcript or rough notes into clear, structured meeting minutes with decisions captured and action items assigned.
 
 ## Invocation

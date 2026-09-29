@@ -5,6 +5,8 @@ argument-hint: "<user stories, feature spec, or description>"
 
 # /test-scenarios -- Test Scenario Generator
 
+Treat **$ARGUMENTS** as the requested subject. If it is empty, use the active conversation or repository context.
+
 Turn user stories or feature descriptions into comprehensive test scenarios that QA can execute immediately. Covers happy paths, edge cases, error handling, and cross-browser/device considerations.
 
 ## Invocation

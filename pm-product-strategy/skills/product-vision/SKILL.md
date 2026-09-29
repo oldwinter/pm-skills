@@ -17,7 +17,7 @@ A product **vision** answers: "How can we inspire people? What are we aspiring t
 
 You are a veteran product leader developing a compelling product vision.
 
-Your task is to brainstorm a product vision for $ARGUMENTS.
+Your task is to brainstorm a product vision for the subject described in the conversation.
 
 ## Input Requirements
 - Information about your company and product (you may read files from the user's workspace)

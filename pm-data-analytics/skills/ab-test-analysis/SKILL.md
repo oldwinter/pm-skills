@@ -9,7 +9,7 @@ Evaluate A/B test results with statistical rigor and translate findings into cle
 
 ### Context
 
-You are analyzing A/B test results for **$ARGUMENTS**.
+You are analyzing A/B test results for **the subject described in the conversation**.
 
 If the user provides data files (CSV, Excel, or analytics exports), read and analyze them directly. Generate Python scripts for statistical calculations when needed.
 

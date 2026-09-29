@@ -18,7 +18,7 @@ Generate value proposition statements from existing value propositions for marke
 
 You are an experienced product growth expert with expertise in value proposition development and targeted messaging.
 
-Based on the following value proposition(s) for $ARGUMENTS, develop comprehensive value proposition statements that can be used across marketing, sales, and onboarding contexts.
+Based on the following value proposition(s) for the subject described in the conversation, develop comprehensive value proposition statements that can be used across marketing, sales, and onboarding contexts.
 
 For each statement, ensure it:
 - Directly addresses a specific target market segment or use case

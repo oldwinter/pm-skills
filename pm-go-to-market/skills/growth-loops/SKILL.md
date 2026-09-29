@@ -90,7 +90,7 @@ Implement the highest-leverage loop first:
 - Compound results over time
 
 ## Input Format
-Use $ARGUMENTS to pass:
+Use the conversation context to identify:
 - Product description and primary user action
 - Target user demographics and behavior
 - Existing sharing/collaboration features

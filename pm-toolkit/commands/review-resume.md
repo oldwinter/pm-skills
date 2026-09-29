@@ -5,6 +5,8 @@ argument-hint: "<resume as text or file>"
 
 # /review-resume -- PM Resume Review
 
+Treat **$ARGUMENTS** as the requested subject. If it is empty, use the active conversation or repository context.
+
 Get a thorough resume review against product management best practices. Evaluates structure, impact metrics, keyword optimization, and provides specific improvement suggestions with examples.
 
 ## Invocation

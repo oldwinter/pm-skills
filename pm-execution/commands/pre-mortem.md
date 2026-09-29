@@ -5,6 +5,8 @@ argument-hint: "<PRD, plan, or feature description>"
 
 # /pre-mortem -- Pre-Launch Risk Analysis
 
+Treat **$ARGUMENTS** as the requested subject. If it is empty, use the active conversation or repository context.
+
 Imagine your launch has failed. Now work backward to figure out why. This command applies the Tigers/Paper Tigers/Elephants framework to surface real risks and create mitigation plans.
 
 ## Invocation

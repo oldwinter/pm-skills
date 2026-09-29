@@ -5,6 +5,8 @@ argument-hint: "<what you want to know, in plain English>"
 
 # /write-query -- SQL Query Generator
 
+Treat **$ARGUMENTS** as the requested subject. If it is empty, use the active conversation or repository context.
+
 Describe what data you need in plain English and get an optimized SQL query. Supports multiple dialects and can read your schema from uploaded files.
 
 ## Invocation

@@ -5,6 +5,8 @@ argument-hint: "<text to check>"
 
 # /proofread -- Grammar & Flow Check
 
+Treat **$ARGUMENTS** as the requested subject. If it is empty, use the active conversation or repository context.
+
 Identify grammar, logical, and flow errors in text. Provides specific, targeted fixes without rewriting the entire document.
 
 ## Invocation

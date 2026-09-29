@@ -5,6 +5,8 @@ argument-hint: "<feature requests as text, file, or paste>"
 
 # /triage-requests -- Feature Request Triage
 
+Treat **$ARGUMENTS** as the requested subject. If it is empty, use the active conversation or repository context.
+
 Take a pile of feature requests — from support tickets, sales calls, surveys, or Slack — and turn them into a prioritized, actionable backlog.
 
 ## Invocation

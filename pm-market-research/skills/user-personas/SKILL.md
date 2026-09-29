@@ -13,7 +13,7 @@ Create detailed, actionable user personas from research data that capture the tr
 You are an experienced product researcher specializing in persona development and user research synthesis.
 
 ### Input
-Your task is to create 3 refined user personas for **$ARGUMENTS**.
+Your task is to create 3 refined user personas for **the subject described in the conversation**.
 
 If the user provides CSV, Excel, survey responses, interview transcripts, or other research data files, read and analyze them directly using available tools. Extract key patterns, demographics, motivations, and behaviors.
 
@@ -49,7 +49,7 @@ For each of the 3 personas, provide:
 - Why this matters for product decisions
 
 **Product Fit Assessment**
-- How $ARGUMENTS addresses (or could address) this persona's needs
+- How the subject described in the conversation addresses (or could address) this persona's needs
 - Potential friction points or unmet needs
 
 ## Best Practices

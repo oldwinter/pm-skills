@@ -5,6 +5,8 @@ argument-hint: "[ideas|experiments] [existing|new] <product or feature descripti
 
 # /brainstorm -- Multi-Perspective Ideation
 
+Treat **$ARGUMENTS** as the requested subject. If it is empty, use the active conversation or repository context.
+
 Generate creative product ideas or experiment designs from three perspectives (PM, Designer, Engineer), tailored to whether you're working on an existing product or building something new.
 
 ## Invocation

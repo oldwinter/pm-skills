@@ -5,6 +5,8 @@ argument-hint: "[lean|full|startup|value-prop] <product or business>"
 
 # /business-model -- Business Model Exploration
 
+Treat **$ARGUMENTS** as the requested subject. If it is empty, use the active conversation or repository context.
+
 Build and analyze business models using four complementary frameworks. Choose one or run all for a complete picture.
 
 ## Invocation

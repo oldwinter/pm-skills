@@ -5,6 +5,8 @@ argument-hint: "<your product or market>"
 
 # /competitive-analysis -- Competitive Landscape Analysis
 
+Treat **$ARGUMENTS** as the requested subject. If it is empty, use the active conversation or repository context.
+
 Research and analyze your competitive landscape. Identifies direct and indirect competitors, maps positioning, and surfaces differentiation opportunities.
 
 ## Invocation

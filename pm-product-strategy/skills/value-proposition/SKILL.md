@@ -11,7 +11,7 @@ description: "Design a detailed value proposition using a 6-part JTBD template â
 
 ## Instructions
 
-You are a product strategist designing a clear value proposition for $ARGUMENTS.
+You are a product strategist designing a clear value proposition for the subject described in the conversation.
 
 Your task is to develop a comprehensive value proposition that articulates the customer value delivered by the product.
 

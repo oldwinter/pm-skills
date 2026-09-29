@@ -13,7 +13,7 @@ Customer interviews are one source in **Stage 1 (Explore)** of continuous discov
 
 ### Context
 
-You are preparing a customer interview script for research on **$ARGUMENTS**.
+You are preparing a customer interview script for research on **the subject described in the conversation**.
 
 If the user provides files (personas, hypothesis lists, product briefs, or previous interview notes), read them first.
 

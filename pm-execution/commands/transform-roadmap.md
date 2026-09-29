@@ -5,6 +5,8 @@ argument-hint: "<roadmap as text, file, or list of planned features>"
 
 # /transform-roadmap -- Outcome-Focused Roadmap
 
+Treat **$ARGUMENTS** as the requested subject. If it is empty, use the active conversation or repository context.
+
 Take a list of planned features or an output-focused roadmap and rewrite it as an outcome-focused roadmap that communicates *why* instead of *what*.
 
 ## Invocation

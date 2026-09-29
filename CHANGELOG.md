@@ -5,6 +5,15 @@
 ### Repo
 
 - The validator now rejects commands that omit the required `argument-hint` frontmatter field.
+- Frontmatter parsing now treats only a standalone `---` line as the closing delimiter.
+- Every command now receives its invocation text through exactly one `$ARGUMENTS` placeholder, and the validator enforces that count.
+- Skills now name the subject from conversation context instead of using the command-only `$ARGUMENTS` placeholder.
+- Commands that reference a missing skill now fail validation instead of producing a non-blocking warning.
+- Commands that hard-reference another plugin now fail validation, preserving independent installation.
+- A plugin without `README.md` now fails validation.
+- Manifest validation now reads JSON as UTF-8 on every operating system and process locale.
+- Non-string required manifest fields now produce validation errors instead of a Python traceback.
+- The consistency suite now rejects duplicate plugin names in `marketplace.json`.
 
 ### pm-ai-shipping
 

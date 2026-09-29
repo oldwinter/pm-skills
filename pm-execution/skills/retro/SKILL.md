@@ -9,7 +9,7 @@ Run a structured retrospective that surfaces insights and produces actionable im
 
 ### Context
 
-You are facilitating a retrospective for **$ARGUMENTS**.
+You are facilitating a retrospective for **the subject described in the conversation**.
 
 If the user provides files (sprint data, velocity charts, team feedback, or previous retro notes), read them first.
 
