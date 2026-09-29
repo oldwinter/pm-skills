@@ -11,6 +11,7 @@
 - Commands that reference a missing skill now fail validation instead of producing a non-blocking warning.
 - Commands that hard-reference another plugin now fail validation, preserving independent installation.
 - A plugin without `README.md` now fails validation.
+- Manifest validation now reads JSON as UTF-8 on every operating system and process locale.
 
 ### pm-ai-shipping
 

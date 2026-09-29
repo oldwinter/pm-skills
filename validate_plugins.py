@@ -124,7 +124,7 @@ def validate_manifest(plugin_dir: str) -> ValidationResult:
         return result
 
     try:
-        with open(pj_path, "r") as f:
+        with open(pj_path, "r", encoding="utf-8") as f:
             data = json.load(f)
     except json.JSONDecodeError as e:
         result.error(f"Invalid JSON in plugin.json: {e}")
