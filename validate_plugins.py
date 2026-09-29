@@ -37,8 +37,7 @@ RECOMMENDED_AUTHOR_FIELDS = ["url"]
 REQUIRED_SKILL_FIELDS = ["name", "description"]
 
 # Required command frontmatter fields
-REQUIRED_COMMAND_FIELDS = ["description"]
-RECOMMENDED_COMMAND_FIELDS = ["argument-hint"]
+REQUIRED_COMMAND_FIELDS = ["description", "argument-hint"]
 
 # Expected README sections (case-insensitive substring match)
 EXPECTED_README_SECTIONS = ["overview", "install", "skill", "command"]
@@ -246,11 +245,6 @@ def validate_command(cmd_path: str) -> ValidationResult:
     for field in REQUIRED_COMMAND_FIELDS:
         if field not in fm or not fm[field]:
             result.error(f"Missing required frontmatter field: {field}")
-
-    # Recommended fields
-    for field in RECOMMENDED_COMMAND_FIELDS:
-        if field not in fm or not fm[field]:
-            result.warn(f"Missing recommended frontmatter field: {field}")
 
     # Description quality
     desc = fm.get("description", "")

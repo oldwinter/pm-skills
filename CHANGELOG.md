@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+### Repo
+
+- The validator now rejects commands that omit the required `argument-hint` frontmatter field.
+
 ### pm-ai-shipping
 
 - Added the **code-review** skill: correctness is the core engine, with performance and security as optional sub-cases of it rather than separate methods. It anchors on agreements between participants across a boundary — the defects that stay invisible file-by-file because each side reads as reasonable alone — forces a violating execution, and refutes every candidate before reporting.
