@@ -248,6 +248,13 @@ def validate_command(cmd_path: str) -> ValidationResult:
         if field not in fm or not fm[field]:
             result.error(f"Missing required frontmatter field: {field}")
 
+    argument_count = content.count("$ARGUMENTS")
+    if argument_count != 1:
+        result.error(
+            "Command must contain exactly one $ARGUMENTS placeholder; "
+            f"found {argument_count}"
+        )
+
     # Description quality
     desc = fm.get("description", "")
     if desc and len(desc) < 10:

@@ -5,6 +5,8 @@ argument-hint: "<product, market, or industry>"
 
 # /market-scan -- Macro Environment Analysis
 
+Treat **$ARGUMENTS** as the requested subject. If it is empty, use the active conversation or repository context.
+
 Run multiple strategic analysis frameworks to understand your competitive and macro environment. Combines SWOT, PESTLE, Porter's Five Forces, and Ansoff Matrix into a single strategic overview.
 
 ## Invocation

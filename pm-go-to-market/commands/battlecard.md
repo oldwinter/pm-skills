@@ -5,6 +5,8 @@ argument-hint: "<your product> vs <competitor>"
 
 # /battlecard -- Competitive Battlecard
 
+Treat **$ARGUMENTS** as the requested subject. If it is empty, use the active conversation or repository context.
+
 Create a concise, sales-ready battlecard that helps your team win deals against a specific competitor. Includes positioning, feature comparison, objection handling, and conversation strategies.
 
 ## Invocation

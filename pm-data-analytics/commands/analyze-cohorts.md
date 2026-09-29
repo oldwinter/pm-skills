@@ -5,6 +5,8 @@ argument-hint: "<data file or description of what to analyze>"
 
 # /analyze-cohorts -- Cohort Analysis
 
+Treat **$ARGUMENTS** as the requested subject. If it is empty, use the active conversation or repository context.
+
 Analyze user retention and engagement patterns by cohort. Upload your data or describe what you need, and get retention curves, feature adoption trends, and actionable insights.
 
 ## Invocation

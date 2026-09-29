@@ -5,6 +5,8 @@ argument-hint: "<research data, survey results, or product description>"
 
 # /research-users -- User Research Synthesis
 
+Treat **$ARGUMENTS** as the requested subject. If it is empty, use the active conversation or repository context.
+
 Turn raw research data into actionable user personas, behavioral segments, and customer journey maps. Accepts survey data, interview notes, feedback, analytics, or a product description for exploratory research.
 
 ## Invocation

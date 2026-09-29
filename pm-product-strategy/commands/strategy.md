@@ -5,6 +5,8 @@ argument-hint: "<product or company>"
 
 # /strategy -- Product Strategy Canvas
 
+Treat **$ARGUMENTS** as the requested subject. If it is empty, use the active conversation or repository context.
+
 Build a complete product strategy document using the 9-section Product Strategy Canvas. Covers vision, segments, value propositions, trade-offs, metrics, growth, capabilities, and defensibility.
 
 ## Invocation

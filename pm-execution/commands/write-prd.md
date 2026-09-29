@@ -5,6 +5,8 @@ argument-hint: "<feature or problem statement>"
 
 # /write-prd -- Product Requirements Document
 
+Treat **$ARGUMENTS** as the requested subject. If it is empty, use the active conversation or repository context.
+
 Create a structured PRD that aligns stakeholders and guides development. Accepts anything from a vague idea to a detailed brief.
 
 ## Invocation

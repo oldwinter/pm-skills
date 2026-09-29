@@ -5,6 +5,8 @@ argument-hint: "<project, initiative, or launch>"
 
 # /stakeholder-map -- Stakeholder Mapping & Communication Plan
 
+Treat **$ARGUMENTS** as the requested subject. If it is empty, use the active conversation or repository context.
+
 Identify all stakeholders for a project, map them by influence and interest, and generate a communication plan that ensures the right people get the right information at the right time.
 
 ## Invocation

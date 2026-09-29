@@ -5,6 +5,8 @@ argument-hint: "[prep|summarize] <topic or transcript>"
 
 # /interview -- Customer Interview Prep & Summary
 
+Treat **$ARGUMENTS** as the requested subject. If it is empty, use the active conversation or repository context.
+
 Two modes: **prep** creates a structured interview script before you talk to customers, **summarize** extracts insights after you've done the interview.
 
 ## Invocation

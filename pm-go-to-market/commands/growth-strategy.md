@@ -5,6 +5,8 @@ argument-hint: "<product or growth challenge>"
 
 # /growth-strategy -- Growth Loops & GTM Motions
 
+Treat **$ARGUMENTS** as the requested subject. If it is empty, use the active conversation or repository context.
+
 Identify and design the growth mechanisms that will drive sustainable traction. Evaluates five growth loop types and seven GTM motions to build a balanced acquisition and expansion strategy.
 
 ## Invocation

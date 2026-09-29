@@ -5,6 +5,8 @@ argument-hint: "<product or pricing question>"
 
 # /pricing -- Pricing Strategy Design
 
+Treat **$ARGUMENTS** as the requested subject. If it is empty, use the active conversation or repository context.
+
 Build a pricing strategy from first principles: analyze pricing models, estimate willingness to pay, benchmark against competitors, and design pricing experiments.
 
 ## Invocation

@@ -5,6 +5,8 @@ argument-hint: "<description of the data you need>"
 
 # /generate-data -- Test Data Generator
 
+Treat **$ARGUMENTS** as the requested subject. If it is empty, use the active conversation or repository context.
+
 Create realistic dummy datasets for development, testing, demos, or prototyping. Outputs as ready-to-use files in your preferred format.
 
 ## Invocation

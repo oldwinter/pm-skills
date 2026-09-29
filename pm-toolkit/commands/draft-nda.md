@@ -5,6 +5,8 @@ argument-hint: "<parties and context>"
 
 # /draft-nda -- NDA Drafting
 
+Treat **$ARGUMENTS** as the requested subject. If it is empty, use the active conversation or repository context.
+
 Draft a professional Non-Disclosure Agreement customized to your situation. Covers information types, jurisdiction, term, and clearly marks clauses that need legal review.
 
 ## Invocation

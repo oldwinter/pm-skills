@@ -5,6 +5,8 @@ argument-hint: "<product or feature idea>"
 
 # /discover -- Full Discovery Cycle
 
+Treat **$ARGUMENTS** as the requested subject. If it is empty, use the active conversation or repository context.
+
 Run a structured product discovery process that moves from divergent thinking to focused validation. This command chains multiple skills into a single end-to-end workflow.
 
 ## Invocation

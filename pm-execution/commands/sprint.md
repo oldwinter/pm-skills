@@ -5,6 +5,8 @@ argument-hint: "[plan|retro|release-notes] <context>"
 
 # /sprint -- Sprint Lifecycle
 
+Treat **$ARGUMENTS** as the requested subject. If it is empty, use the active conversation or repository context.
+
 Three modes covering the sprint lifecycle: **plan** for sprint planning, **retro** for retrospectives, **release-notes** for shipping communication.
 
 ## Invocation

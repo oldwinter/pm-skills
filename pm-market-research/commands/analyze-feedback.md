@@ -5,6 +5,8 @@ argument-hint: "<feedback data as CSV, text, or file>"
 
 # /analyze-feedback -- User Feedback Analysis
 
+Treat **$ARGUMENTS** as the requested subject. If it is empty, use the active conversation or repository context.
+
 Process large volumes of user feedback (reviews, surveys, support tickets, NPS responses) into structured insights with sentiment analysis and segment-level patterns.
 
 ## Invocation

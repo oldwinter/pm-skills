@@ -5,6 +5,8 @@ argument-hint: "<product or feature>"
 
 # /value-proposition -- Value Proposition Design
 
+Treat **$ARGUMENTS** as the requested subject. If it is empty, use the active conversation or repository context.
+
 Design a clear, compelling value proposition for a product or feature using the 6-part JTBD template. An alternative to Strategyzer's Value Proposition Canvas that starts with the customer and focuses on practical outcomes.
 
 ## Invocation

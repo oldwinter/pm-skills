@@ -5,6 +5,8 @@ argument-hint: "<resume> + <job description>"
 
 # /tailor-resume -- Resume-to-JD Optimization
 
+Treat **$ARGUMENTS** as the requested subject. If it is empty, use the active conversation or repository context.
+
 Take your resume and a target job description, then strategically align your experience to maximize interview chances. Keyword optimization, bullet point rewriting, and gap analysis.
 
 ## Invocation

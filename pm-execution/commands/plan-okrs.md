@@ -5,6 +5,8 @@ argument-hint: "<team, product area, or company objective>"
 
 # /plan-okrs -- Team OKR Planning
 
+Treat **$ARGUMENTS** as the requested subject. If it is empty, use the active conversation or repository context.
+
 Generate well-structured OKRs that connect team work to company strategy. Produces 3 OKR sets with qualitative objectives and quantitative key results.
 
 ## Invocation

@@ -5,6 +5,8 @@ argument-hint: "<product or feature area>"
 
 # /setup-metrics -- Product Metrics Dashboard Design
 
+Treat **$ARGUMENTS** as the requested subject. If it is empty, use the active conversation or repository context.
+
 Design a comprehensive metrics framework for your product or feature — from selecting the right North Star to defining alert thresholds that catch problems early.
 
 ## Invocation

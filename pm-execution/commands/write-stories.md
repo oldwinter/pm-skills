@@ -5,6 +5,8 @@ argument-hint: "[user|job|wwa] <feature description or PRD>"
 
 # /write-stories -- Backlog Item Generator
 
+Treat **$ARGUMENTS** as the requested subject. If it is empty, use the active conversation or repository context.
+
 Break a feature into well-structured backlog items. Choose from three formats based on your team's preference, each with full acceptance criteria.
 
 ## Invocation

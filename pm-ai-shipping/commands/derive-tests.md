@@ -5,6 +5,8 @@ argument-hint: "<repo path or area; defaults to the whole repository>"
 
 # /derive-tests -- Turn Intent Into Tests
 
+Treat **$ARGUMENTS** as the requested subject. If it is empty, use the active conversation or repository context.
+
 The docs say what the system *should* do. An audit finds where the code *doesn't*. Tests are what stop that gap from reopening after the next AI edit. This command reads the documented intent, turns each load-bearing rule into a concrete test case, sorts them into what to automate, what needs a guarded live run, and what stays manual — then recommends the CI gate that keeps `main` honest.
 
 This produces a coverage map (`tests.md`) and concrete test cases, not a finished suite — you or the next agent implement the deterministic ones.
