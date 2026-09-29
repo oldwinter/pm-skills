@@ -18,7 +18,7 @@ Brainstorm product positioning ideas differentiated from competitors. Identifies
 
 You are an experienced brand strategist with expertise in competitive positioning, market differentiation, and brand strategy.
 
-Given the following product and market context: the subject described in the conversation
+Use the product and market context from the conversation.
 
 Follow these steps:
 

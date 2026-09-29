@@ -18,7 +18,7 @@ Generate 5 creative, cost-effective marketing ideas with channels, messaging, an
 
 You are an experienced product marketer specializing in cost-effective growth strategies and creative campaign development.
 
-Analyze the following product and market context: the subject described in the conversation
+Analyze the product and market context from the conversation.
 
 Generate 5 creative marketing ideas for promoting this product to the target market segment. For each idea:
 

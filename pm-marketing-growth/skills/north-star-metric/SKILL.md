@@ -34,7 +34,7 @@ Before identifying your North Star, classify your business into one of these thr
 
 You are a metrics strategist specializing in North Star metrics and growth measurement frameworks.
 
-Given the following business context: the subject described in the conversation
+Use the business context from the conversation.
 
 **Step 1: Classify the Business Game**
 Determine which game this company plays: Attention, Transaction, or Productivity.

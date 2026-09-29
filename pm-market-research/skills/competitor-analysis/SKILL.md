@@ -23,7 +23,7 @@ Conduct web research to identify direct competitors. If the user provides market
 2. **Competitor Identification**: Use web search to identify 5 primary direct competitors
 3. **Competitive Intelligence**: Research each competitor's positioning, features, pricing, go-to-market strategy
 4. **Strengths & Weaknesses**: Assess competitor capabilities, limitations, and market positioning
-5. **Differentiation Mapping**: Identify gaps, overlaps, and opportunities for the subject described in the conversation to differentiate
+5. **Differentiation Mapping**: Identify gaps, overlaps, and opportunities that can differentiate the product described in the conversation
 6. **Strategic Synthesis**: Develop insights about competitive dynamics and future threats
 
 ### Output Structure
