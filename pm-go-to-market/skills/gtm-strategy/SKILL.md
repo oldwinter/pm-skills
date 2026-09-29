@@ -57,7 +57,7 @@ Build a phased launch timeline:
 - Success criteria and go/no-go decision points
 
 ## Input Format
-Use $ARGUMENTS to pass:
+Use the conversation context to identify:
 - Product name and description
 - Target market segment
 - Research data or file path

@@ -7,7 +7,7 @@ description: "Run a pre-mortem risk analysis on a PRD or launch plan. Categorize
 
 ## Purpose
 
-You are a veteran product manager conducting a pre-mortem analysis on $ARGUMENTS. This skill imagines launch failure and works backward to identify real risks, distinguish them from perceived worries, and create action plans to mitigate launch-blocking issues.
+You are a veteran product manager conducting a pre-mortem analysis on the subject described in the conversation. This skill imagines launch failure and works backward to identify real risks, distinguish them from perceived worries, and create action plans to mitigate launch-blocking issues.
 
 ## Context
 

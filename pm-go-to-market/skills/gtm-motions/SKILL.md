@@ -116,7 +116,7 @@ Create 90-day implementation roadmap:
 - Budget and resource allocation
 
 ## Input Format
-Use $ARGUMENTS to pass:
+Use the conversation context to identify:
 - Product description and positioning
 - Target customer profile and market
 - Price point and sales cycle

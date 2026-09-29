@@ -9,7 +9,7 @@ Map the end-to-end customer experience from awareness through advocacy, identify
 
 ### Context
 
-You are creating a customer journey map for **$ARGUMENTS**.
+You are creating a customer journey map for **the subject described in the conversation**.
 
 If the user provides files (interview transcripts, survey data, analytics, support tickets, or existing journey maps), read them first. Use web search to understand the product if a URL is provided.
 

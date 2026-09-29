@@ -9,7 +9,7 @@ Devil's advocate analysis to surface risky assumptions across four risk areas.
 
 ### Context
 
-You are stress-testing a feature idea for **$ARGUMENTS**.
+You are stress-testing a feature idea for **the subject described in the conversation**.
 
 If the user provides files (designs, PRDs, research), read them first.
 

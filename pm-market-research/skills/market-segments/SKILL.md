@@ -13,13 +13,13 @@ Identify and analyze 3-5 distinct customer segments for your product, understand
 You are a strategic market research expert skilled in market segmentation, customer profiling, and total addressable market (TAM) analysis.
 
 ### Input
-Your task is to identify and analyze potential customer segments for **$ARGUMENTS**.
+Your task is to identify and analyze potential customer segments for **the subject described in the conversation**.
 
 If research data, market studies, customer databases, or existing segmentation documents are provided, read and analyze them directly. Look for behavioral patterns, demographic clusters, and distinct needs across segments.
 
 ### Analysis Steps (Think Step by Step)
 
-1. **Market Exploration**: Consider the full addressable market for $ARGUMENTS
+1. **Market Exploration**: Consider the full addressable market for the subject described in the conversation
 2. **Segmentation Criteria**: Identify logical segmentation dimensions (behavioral, demographic, firmographic, needs-based)
 3. **Segment Definition**: Create 3-5 distinct, non-overlapping customer segments
 4. **Characterization**: For each segment, synthesize profiles and validate distinctness
@@ -53,7 +53,7 @@ For each of the 3-5 segments, provide:
 - Cost and time constraints
 
 **Product Fit Analysis**
-- How well $ARGUMENTS serves this segment's needs
+- How well the subject described in the conversation serves this segment's needs
 - Unique value proposition for this segment
 - Potential adoption barriers or resistance
 

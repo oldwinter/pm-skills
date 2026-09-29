@@ -193,6 +193,11 @@ def validate_skill(skill_dir: str) -> ValidationResult:
     with open(skill_md, "r", encoding="utf-8") as f:
         content = f.read()
 
+    if "$ARGUMENTS" in content:
+        result.error(
+            "Skills must read conversation context and cannot contain $ARGUMENTS"
+        )
+
     # Frontmatter check
     fm = parse_yaml_frontmatter(content)
     if fm is None:

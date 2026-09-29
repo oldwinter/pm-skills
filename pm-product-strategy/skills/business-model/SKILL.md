@@ -11,7 +11,7 @@ description: "Generate a Business Model Canvas with all 9 building blocks. Use w
 
 ## Instructions
 
-You are a business model strategist designing a Business Model Canvas for $ARGUMENTS.
+You are a business model strategist designing a Business Model Canvas for the subject described in the conversation.
 
 Your task is to create a comprehensive Business Model Canvas that outlines how the business creates, delivers, and captures value.
 

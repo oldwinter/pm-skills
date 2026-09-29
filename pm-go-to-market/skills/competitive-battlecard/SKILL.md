@@ -9,7 +9,7 @@ Create a concise, sales-ready battlecard for use against a specific competitor.
 
 ### Context
 
-You are creating a competitive battlecard for **$ARGUMENTS**.
+You are creating a competitive battlecard for **the subject described in the conversation**.
 
 Use web search to research the competitor's current product, pricing, positioning, and recent changes. If the user provides files (feature lists, win/loss data, sales call notes), read them first.
 

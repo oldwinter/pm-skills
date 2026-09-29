@@ -9,7 +9,7 @@ Map stakeholders on a Power × Interest grid and create a tailored communication
 
 ### Context
 
-You are helping build a stakeholder map for **$ARGUMENTS**.
+You are helping build a stakeholder map for **the subject described in the conversation**.
 
 If the user provides files (org charts, project briefs, team rosters), read them first. If they describe the product or initiative, use that context to infer likely stakeholders.
 

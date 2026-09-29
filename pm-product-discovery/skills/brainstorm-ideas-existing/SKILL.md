@@ -9,7 +9,7 @@ Multi-perspective ideation for continuous product discovery. Generates ideas fro
 
 ### Context
 
-You are supporting a product trio performing continuous product discovery for **$ARGUMENTS**.
+You are supporting a product trio performing continuous product discovery for **the subject described in the conversation**.
 
 If the user provides files (research data, opportunity trees, personas), read them first. If they mention a product URL, use web search to understand the product.
 

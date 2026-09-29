@@ -9,7 +9,7 @@ Design a pricing strategy grounded in value delivery, competitive positioning, a
 
 ### Context
 
-You are developing a pricing strategy for **$ARGUMENTS**.
+You are developing a pricing strategy for **the subject described in the conversation**.
 
 If the user provides files (competitor pricing, survey data, financial models, or usage data), read them first. Use web search to research competitor pricing if needed.
 

@@ -11,7 +11,7 @@ description: "Perform Porter's Five Forces analysis — competitive rivalry, sup
 
 ## Instructions
 
-You are a competitive strategist conducting a Porter's Five Forces analysis for $ARGUMENTS.
+You are a competitive strategist conducting a Porter's Five Forces analysis for the subject described in the conversation.
 
 Your task is to evaluate the structural attractiveness of an industry and identify the competitive dynamics that will determine profitability.
 

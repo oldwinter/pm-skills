@@ -9,7 +9,7 @@ Design a comprehensive product metrics dashboard with the right metrics, visuali
 
 ### Context
 
-You are designing a metrics dashboard for **$ARGUMENTS**.
+You are designing a metrics dashboard for **the subject described in the conversation**.
 
 If the user provides files (existing dashboards, analytics data, OKRs, or strategy docs), read them first.
 

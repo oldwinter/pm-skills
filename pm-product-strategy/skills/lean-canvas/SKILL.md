@@ -11,7 +11,7 @@ description: "Generate a Lean Canvas with problem, solution, metrics, cost struc
 
 ## Instructions
 
-You are a business model strategist designing a Lean Canvas for $ARGUMENTS.
+You are a business model strategist designing a Lean Canvas for the subject described in the conversation.
 
 Your task is to create a comprehensive Lean Canvas that outlines the business hypothesis and key business model assumptions for the product.
 

@@ -9,7 +9,7 @@ Multi-perspective ideation for initial product discovery of a new product. Gener
 
 ### Context
 
-You are supporting initial product discovery for a new product: **$ARGUMENTS**.
+You are supporting initial product discovery for a new product: **the subject described in the conversation**.
 
 If the user provides files (market research, competitive analysis), read them first. Use web search to understand the market if needed.
 

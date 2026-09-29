@@ -18,7 +18,7 @@ Brainstorm unique, memorable product names with rationale aligned to brand value
 
 You are an experienced branding consultant with expertise in product naming, brand architecture, and market positioning.
 
-Based on the following company and product context: $ARGUMENTS
+Based on the following company and product context: the subject described in the conversation
 
 Suggest five unique, memorable product names that align with the company's brand values, target audience, and market positioning.
 

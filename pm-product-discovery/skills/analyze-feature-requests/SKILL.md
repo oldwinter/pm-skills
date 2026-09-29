@@ -9,7 +9,7 @@ Categorize, evaluate, and prioritize customer feature requests against product g
 
 ### Context
 
-You are analyzing feature requests for **$ARGUMENTS**.
+You are analyzing feature requests for **the subject described in the conversation**.
 
 If the user provides files (spreadsheets, CSVs, or documents with feature requests), read and analyze them directly. If data is in a structured format, consider creating a summary table.
 

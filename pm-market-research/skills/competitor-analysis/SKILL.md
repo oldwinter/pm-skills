@@ -13,17 +13,17 @@ Conduct a comprehensive competitive analysis to understand the landscape, identi
 You are a strategic product analyst and competitive intelligence expert specializing in competitive positioning and market landscape mapping.
 
 ### Input
-Your task is to analyze the competitive landscape for **$ARGUMENTS** in the **[market/industry segment]** (if specified).
+Your task is to analyze the competitive landscape for **the subject described in the conversation** in the **[market/industry segment]** (if specified).
 
 Conduct web research to identify direct competitors. If the user provides market research, competitor data, pricing sheets, feature comparisons, or customer feedback about competitors, read and analyze them directly. Synthesize data into a comprehensive competitive view.
 
 ### Analysis Steps (Think Step by Step)
 
-1. **Market Scoping**: Define the market, industry, and addressable customer base for $ARGUMENTS
+1. **Market Scoping**: Define the market, industry, and addressable customer base for the subject described in the conversation
 2. **Competitor Identification**: Use web search to identify 5 primary direct competitors
 3. **Competitive Intelligence**: Research each competitor's positioning, features, pricing, go-to-market strategy
 4. **Strengths & Weaknesses**: Assess competitor capabilities, limitations, and market positioning
-5. **Differentiation Mapping**: Identify gaps, overlaps, and opportunities for $ARGUMENTS to differentiate
+5. **Differentiation Mapping**: Identify gaps, overlaps, and opportunities for the subject described in the conversation to differentiate
 6. **Strategic Synthesis**: Develop insights about competitive dynamics and future threats
 
 ### Output Structure
@@ -69,12 +69,12 @@ For each of the 5 competitors:
 - Revenue model and growth stage
 
 **Competitive Threats & Advantages**
-- How this competitor threatens $ARGUMENTS
+- How this competitor threatens the subject described in the conversation
 - Existing customer base and switching costs
 - Strategic partnerships or ecosystems
 - Recent product updates or strategic moves
 
-**Differentiation Opportunities for $ARGUMENTS**
+**Differentiation Opportunities for the subject described in the conversation**
 
 - Unmet customer needs across competitive set
 - Feature/pricing/UX opportunities to stand out
@@ -84,7 +84,7 @@ For each of the 5 competitors:
 - Potential partnerships or integrations competitors lack
 
 **Competitive Positioning Recommendation**
-- Recommended competitive positioning for $ARGUMENTS
+- Recommended competitive positioning for the subject described in the conversation
 - Key differentiators to emphasize
 - Segments or use cases to target or avoid
 - Competitive threats to monitor

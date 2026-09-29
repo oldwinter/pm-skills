@@ -9,7 +9,7 @@ Transform an interview transcript into a structured summary focused on Jobs to B
 
 ### Context
 
-You are summarizing a customer interview for the product discovery of **$ARGUMENTS**.
+You are summarizing a customer interview for the product discovery of **the subject described in the conversation**.
 
 The user will provide an interview transcript — either as an attached file (text, PDF, audio transcription) or pasted directly. Read any attached files first.
 

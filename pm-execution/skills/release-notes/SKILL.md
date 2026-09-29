@@ -9,7 +9,7 @@ Transform technical tickets, PRDs, or internal changelogs into polished, user-fa
 
 ### Context
 
-You are writing release notes for **$ARGUMENTS**.
+You are writing release notes for **the subject described in the conversation**.
 
 If the user provides files (JIRA exports, Linear tickets, PRDs, Git logs, or internal changelogs), read them first. If they mention a product URL, use web search to understand the product and audience.
 

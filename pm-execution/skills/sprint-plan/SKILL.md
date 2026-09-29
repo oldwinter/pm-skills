@@ -9,7 +9,7 @@ Plan a sprint by estimating team capacity, selecting and sequencing stories, and
 
 ### Context
 
-You are helping plan a sprint for **$ARGUMENTS**.
+You are helping plan a sprint for **the subject described in the conversation**.
 
 If the user provides files (backlogs, velocity data, team rosters, or previous sprint reports), read them first.
 
