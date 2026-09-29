@@ -130,19 +130,25 @@ def validate_manifest(plugin_dir: str) -> ValidationResult:
         result.error(f"Invalid JSON in plugin.json: {e}")
         return result
 
+    if not isinstance(data, dict):
+        result.error("plugin.json must contain a JSON object")
+        return result
+
     # Required fields
     for field in REQUIRED_MANIFEST_FIELDS:
         if field not in data or not data[field]:
             result.error(f"Missing required field: {field}")
+        elif not isinstance(data[field], str):
+            result.error(f"Required field '{field}' must be a string")
 
     # Name must match directory name
     dir_name = os.path.basename(plugin_dir)
-    if data.get("name") and data["name"] != dir_name:
+    if isinstance(data.get("name"), str) and data["name"] != dir_name:
         result.error(f"Name mismatch: plugin.json says '{data['name']}' but directory is '{dir_name}'")
 
     # Version format
     version = data.get("version", "")
-    if version and not re.match(r'^\d+\.\d+\.\d+$', version):
+    if isinstance(version, str) and version and not re.match(r'^\d+\.\d+\.\d+$', version):
         result.warn(f"Version '{version}' doesn't follow semver (x.y.z)")
 
     # Recommended fields
@@ -171,7 +177,7 @@ def validate_manifest(plugin_dir: str) -> ValidationResult:
 
     # Description length check
     desc = data.get("description", "")
-    if desc and len(desc) < 20:
+    if isinstance(desc, str) and desc and len(desc) < 20:
         result.warn(f"Description is very short ({len(desc)} chars)")
 
     result.note(f"Version: {version}")
