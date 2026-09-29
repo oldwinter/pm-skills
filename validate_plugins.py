@@ -297,6 +297,7 @@ def validate_readme(plugin_dir: str) -> ValidationResult:
 def validate_cross_references(plugin_dir: str, skill_names: list[str]) -> ValidationResult:
     """Check that commands reference skills that actually exist in this plugin."""
     result = ValidationResult()
+    plugin_name = os.path.basename(plugin_dir)
     cmds_dir = os.path.join(plugin_dir, "commands")
 
     if not os.path.isdir(cmds_dir):
@@ -314,6 +315,14 @@ def validate_cross_references(plugin_dir: str, skill_names: list[str]) -> Valida
         for ref in refs:
             if ref not in skill_names:
                 result.error(f"Command {cmd_file} references skill '{ref}' not found in this plugin")
+
+        command_refs = set(re.findall(r'/([\w-]+):([\w-]+)', content))
+        for ref_plugin, ref_command in sorted(command_refs):
+            if ref_plugin != plugin_name:
+                result.error(
+                    f"Command {cmd_file} hard-references another plugin: "
+                    f"/{ref_plugin}:{ref_command}"
+                )
 
     return result
 

@@ -9,6 +9,7 @@
 - Every command now receives its invocation text through exactly one `$ARGUMENTS` placeholder, and the validator enforces that count.
 - Skills now name the subject from conversation context instead of using the command-only `$ARGUMENTS` placeholder.
 - Commands that reference a missing skill now fail validation instead of producing a non-blocking warning.
+- Commands that hard-reference another plugin now fail validation, preserving independent installation.
 
 ### pm-ai-shipping
 
