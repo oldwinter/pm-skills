@@ -12,6 +12,7 @@ What this locks in:
 
 import json
 import re
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -73,6 +74,40 @@ class TestMarketplaceList(unittest.TestCase):
                 f"./{p['name']}",
                 f"plugin {p['name']} has source {p['source']}",
             )
+
+    def test_duplicate_marketplace_names_are_rejected(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            for name in ("plugin-a", "plugin-b"):
+                manifest = root / name / ".claude-plugin" / "plugin.json"
+                manifest.parent.mkdir(parents=True)
+                manifest.write_text("{}", encoding="utf-8")
+            fixture = root / "marketplace.json"
+            fixture.write_text(
+                json.dumps(
+                    {
+                        "plugins": [
+                            {"name": "plugin-a"},
+                            {"name": "plugin-b"},
+                            {"name": "plugin-b"},
+                        ]
+                    }
+                ),
+                encoding="utf-8",
+            )
+            old_root, old_marketplace = ROOT, MARKETPLACE
+            try:
+                globals()["ROOT"], globals()["MARKETPLACE"] = root, fixture
+                duplicate_check = TestMarketplaceList(
+                    "test_marketplace_lists_exactly_the_plugins_on_disk"
+                )
+                with self.assertRaises(AssertionError):
+                    duplicate_check.test_marketplace_lists_exactly_the_plugins_on_disk()
+            finally:
+                globals()["ROOT"], globals()["MARKETPLACE"] = (
+                    old_root,
+                    old_marketplace,
+                )
 
 
 class TestVersionSync(unittest.TestCase):
