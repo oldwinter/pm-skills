@@ -60,12 +60,14 @@ class C:
 
 def parse_yaml_frontmatter(content: str) -> Optional[dict]:
     """Extract YAML frontmatter from a markdown file (between --- markers)."""
-    if not content.startswith("---"):
+    lines = content.splitlines()
+    if not lines or lines[0] != "---":
         return None
-    end = content.find("---", 3)
-    if end == -1:
+    try:
+        end = lines.index("---", 1)
+    except ValueError:
         return None
-    fm_text = content[3:end].strip()
+    fm_text = "\n".join(lines[1:end])
     # Simple YAML parser for flat key-value pairs
     result = {}
     for line in fm_text.split("\n"):

@@ -5,6 +5,7 @@
 ### Repo
 
 - The validator now rejects commands that omit the required `argument-hint` frontmatter field.
+- Frontmatter parsing now treats only a standalone `---` line as the closing delimiter.
 
 ### pm-ai-shipping
 
