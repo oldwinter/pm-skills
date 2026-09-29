@@ -14,6 +14,7 @@ import json
 import re
 import tempfile
 import unittest
+from collections import Counter
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -58,7 +59,12 @@ def latest_changelog_version() -> str:
 
 class TestMarketplaceList(unittest.TestCase):
     def test_marketplace_lists_exactly_the_plugins_on_disk(self):
-        listed = {p["name"] for p in marketplace()["plugins"]}
+        listed_names = [p["name"] for p in marketplace()["plugins"]]
+        duplicates = sorted(
+            name for name, count in Counter(listed_names).items() if count > 1
+        )
+        self.assertEqual(duplicates, [], f"duplicate marketplace plugins: {duplicates}")
+        listed = set(listed_names)
         on_disk = {p.name for p in plugin_dirs()}
         self.assertEqual(
             listed,

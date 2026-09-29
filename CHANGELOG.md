@@ -13,6 +13,7 @@
 - A plugin without `README.md` now fails validation.
 - Manifest validation now reads JSON as UTF-8 on every operating system and process locale.
 - Non-string required manifest fields now produce validation errors instead of a Python traceback.
+- The consistency suite now rejects duplicate plugin names in `marketplace.json`.
 
 ### pm-ai-shipping
 
