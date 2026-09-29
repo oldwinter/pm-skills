@@ -8,6 +8,7 @@
 - Frontmatter parsing now treats only a standalone `---` line as the closing delimiter.
 - Every command now receives its invocation text through exactly one `$ARGUMENTS` placeholder, and the validator enforces that count.
 - Skills now name the subject from conversation context instead of using the command-only `$ARGUMENTS` placeholder.
+- Commands that reference a missing skill now fail validation instead of producing a non-blocking warning.
 
 ### pm-ai-shipping
 

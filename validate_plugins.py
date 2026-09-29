@@ -313,7 +313,7 @@ def validate_cross_references(plugin_dir: str, skill_names: list[str]) -> Valida
         refs = re.findall(r'\*\*(\w[\w-]+)\*\*\s+skill', content)
         for ref in refs:
             if ref not in skill_names:
-                result.warn(f"Command {cmd_file} references skill '{ref}' not found in this plugin")
+                result.error(f"Command {cmd_file} references skill '{ref}' not found in this plugin")
 
     return result
 
