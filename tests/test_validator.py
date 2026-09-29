@@ -1,6 +1,7 @@
 """Unit tests for validate_plugins.py plus a repo-wide validation gate."""
 
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -27,6 +28,22 @@ class TestFrontmatterParser(unittest.TestCase):
     def test_strips_quotes(self):
         fm = vp.parse_yaml_frontmatter("---\nname: 'quoted'\n---\n")
         self.assertEqual(fm["name"], "quoted")
+
+
+class TestCommandValidation(unittest.TestCase):
+    def test_missing_argument_hint_is_error(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            command = Path(temp_dir) / "missing-hint.md"
+            command.write_text(
+                "---\ndescription: Valid command description\n---\nBody\n",
+                encoding="utf-8",
+            )
+
+            result = vp.validate_command(str(command))
+
+        self.assertIn(
+            "Missing required frontmatter field: argument-hint", result.errors
+        )
 
 
 class TestCountWords(unittest.TestCase):
