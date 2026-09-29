@@ -279,7 +279,7 @@ def validate_readme(plugin_dir: str) -> ValidationResult:
     readme_path = os.path.join(plugin_dir, "README.md")
 
     if not os.path.isfile(readme_path):
-        result.warn("Missing README.md")
+        result.error("Missing README.md")
         return result
 
     with open(readme_path, "r", encoding="utf-8") as f:
