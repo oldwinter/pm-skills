@@ -4,6 +4,7 @@
 
 ### Repo
 
+- Added Cursor plugin manifests: a root `.cursor-plugin/marketplace.json` and a `.cursor-plugin/plugin.json` in every plugin, mirroring the Claude manifests. Claude manifests are unchanged.
 - The validator now rejects commands that omit the required `argument-hint` frontmatter field.
 - Frontmatter parsing now treats only a standalone `---` line as the closing delimiter.
 - Every command now receives its invocation text through exactly one `$ARGUMENTS` placeholder, and the validator enforces that count.
@@ -15,12 +16,27 @@
 - Non-string required manifest fields now produce validation errors instead of a Python traceback.
 - The consistency suite now rejects duplicate plugin names in `marketplace.json`.
 
+## v2.2.0 — 2026-10-10
+
+### pm-execution
+
+- **create-prd** is now lean by default: a first PRD is about one to two pages, with the detailed version on request. Feedback was that the skill fought itself, asking for a "comprehensive" document and for brevity at the same time. "Complete" now means no gap that blocks a decision about the first version; the section questions are a checklist to pick from rather than a form to fill; Market Segments and Value Propositions are always included; unknowns go to Assumptions and open questions instead of being invented; it asks up to three questions when the problem, the users, or the success metric is missing; it researches the market, competitors, and alternatives freely, citing sources, and puts a finding in the PRD only when it changes a decision; and it ends by naming what it left out so you can expand any section. The Value Proposition section now uses the 6-part JTBD template (Who, Why, What before, How, What after, Alternatives, by Paweł Huryn and Aatir Abdul Rauf), one per segment (two or three segments at most for a first version), and is the spine of the PRD: the Solution delivers its How and the Key Results measure its What after. It also gained a short checklist for reviewing an existing PRD.
+- **`/write-prd`** now uses the create-prd template. It had carried its own, different 8-section template while also invoking the skill. It asks at most three questions up front.
+
 ### pm-ai-shipping
 
 - Added the **code-review** skill: correctness is the core engine, with performance and security as optional sub-cases of it rather than separate methods. It anchors on agreements between participants across a boundary — the defects that stay invisible file-by-file because each side reads as reasonable alone — forces a violating execution, and refutes every candidate before reporting.
 - Added a correctness taxonomy reference built from real fix history, plus performance and security reference sheets the same engine reads.
 - `/ship-check` gained a correctness review as Step 3, before the security and performance audits, and an independent unsteered pass by a second model as Step 6.
 - `/security-audit-static` gained an OWASP Top 10 coverage backstop: every surviving finding is mapped to a category, and any category with zero findings is flagged "not covered — double-check" rather than silently passing. It is a coverage check, not a mandate to invent findings.
+- Docs, the test-coverage map and reports now follow the host repo's setup. Before writing, the kit reads the repo's agent instructions (`AGENTS.md`, `CLAUDE.md` and what they import), its docs folder, and any existing equivalent of each document under any name; it updates those instead of creating parallel files and keeps their naming and date conventions. `documentation/`, `documentation/tests.md`, `reports/` and the default file names apply only where the repo has none, and the output says so. It never creates a file that differs from an existing one only in letter case (`tests.md` beside `TESTS.md`), which collides on Windows and macOS. The rule lives once, in the **shipping-artifacts** skill.
+- `/ship-check` edits the agent instruction file the repo already uses. Where one of `CLAUDE.md` and `AGENTS.md` only imports or points to the other (a `CLAUDE.md` that is just `@AGENTS.md`), it edits the file pointed to and leaves the pointer alone; where only one exists, it edits that one. `CLAUDE.md` plus a thin `AGENTS.md` is created only in a repo with neither.
+- The independent review in `/ship-check` Step 6 is a fresh session of a model family different from the one that built the code, using the reviewer the repo's own instructions name. It no longer names a specific model as the usual choice.
+- `/derive-tests` defers to the repo's stated gate policy. A repo whose instructions make the gate a local command plus a human go keeps that: the coverage map records the policy and whether the deterministic tests run inside it, instead of recommending hosted CI and branch protection over it. The green-before-merge CI gate remains the recommendation where the repo states no policy.
+- `/derive-tests` writes into an existing file only when that file is a test-coverage map. A `TESTS.md` that describes the repo's testing method is no longer taken for the map just because of its name: the kit matches on what a file covers, uses the repo's real coverage map, and where there is none picks a name that collides with nothing, rather than writing into a same-named file about something else.
+- `/document-app check` is a check-only mode for a repo that keeps its docs by hand as intent. It writes no file and reports each place where an existing doc and the code disagree: the doc says X, the code does Y, with `file:line` on both sides. It doesn't decide which side is wrong; the owner decides whether to fix the code or the doc. The output ends with a short summary a release checklist can cite.
+- `/derive-tests check` does the same for the coverage map. It writes no file, reads the tests without running them, and reports rows that are stale against the docs or the test suite (a documented rule with no row, an "existing" row whose test is gone, a test the map doesn't credit), ending with the same kind of citable summary.
+- `/security-audit-static` and `/performance-audit-static` can audit only a change: pass a git range (`/security-audit-static v2.1.0..HEAD`), `changes` for the uncommitted working tree, or both. The audit covers the changed files plus what the change makes newly reachable or newly wrong elsewhere, not the whole codebase. A release normally audits only its changes; a whole-repository audit, still the default with no argument, is for the first release or after a large refactor.
 
 ## v2.1.0 — 2026-07-03
 

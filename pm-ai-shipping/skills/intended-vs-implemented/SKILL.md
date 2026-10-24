@@ -13,11 +13,11 @@ This skill is the method for finding that gap. It is the differentiator: it only
 
 ## Context
 
-Use this when documented intent exists — `permissions.md`, `architecture.md`, `variables.md`, etc. If those docs are absent or stale, that absence is itself the first finding: you cannot audit intent you never recorded. Recommend documenting first, then auditing.
+Use this when documented intent exists — `permissions.md`, `architecture.md`, `variables.md`, etc., or the repo's own equivalents under whatever names it uses. If those docs are absent or stale, that absence is itself the first finding: you cannot audit intent you never recorded. Recommend documenting first, then auditing.
 
 ## Method
 
-1. **Establish intent.** Read the `documentation/*.md` set as the source of truth for what *should* be true: who may access what, which boundaries are trusted, which data is public. Treat the docs as claims to verify, not as proof.
+1. **Establish intent.** Read the system docs, wherever the repo keeps them (`documentation/*.md` by default; see the **shipping-artifacts** skill), as the source of truth for what *should* be true: who may access what, which boundaries are trusted, which data is public. Treat the docs as claims to verify, not as proof.
 
 2. **Gather implementation evidence.** Read the code that enforces (or fails to enforce) each claim. Evidence is a cited file and line — the actual authorization check, the actual query filter, the actual sanitizer. "It's probably handled upstream" is not evidence; the code path is.
 
@@ -44,6 +44,6 @@ Use this when documented intent exists — `permissions.md`, `architecture.md`, 
 
 这是 `intended-vs-implemented` 的中文 runtime 入口。
 
-中文产品管理请求命中本 skill 时，先确认目标产出和适用的 PM framework，再按下方上游流程执行。输出说明使用简体中文；framework 名称、公式、字段、命令、路径、模板结构、引用和代码保持原样，法律与合规内容不替代专业意见。
+中文产品管理请求命中本 skill 时，先按宿主仓库自己的 agent 指令、文档目录和既有命名找到系统文档，不要假定它们一定位于 `documentation/*.md`。逐条把文档声明当作待验证主张，在代码中定位实际执行点或可证明的缺失，并同时引用文档与代码；只保留跨越信任、数据、成本或租户边界且会影响他人的差异。输出说明使用简体中文；framework 名称、公式、字段、命令、路径、模板结构、引用和代码保持原样，法律与合规内容不替代专业意见。
 
 # Intended vs. Implemented: Auditing the Gap

@@ -6,8 +6,9 @@
 
 - 上游项目：`phuryn/pm-skills`
 - 中文 fork：`oldwinter/pm-skills`
-- 当前同步上游 commit：`8607e3b`
+- 当前同步上游 commit：`07b34f64ee828df08953f505b7f747aef85ae7c6`
 - 主要安装面：Claude Code/Cowork marketplace、Codex plugin、skills 目录
+- 其他 plugin 清单：9 个 plugin 同时提供 `.claude-plugin/plugin.json` 与 `.cursor-plugin/plugin.json`，根目录提供对应 marketplace 清单
 - 中文 runtime 入口：9 个 plugin 下的 69 个 `*/skills/*/SKILL.md`
 
 ## 中文化目标
