@@ -94,3 +94,7 @@ An empty *Disagreements* section says what was read to reach it. Then stop: don'
 - Write for two readers: a human reviewer and the next AI coding agent.
 - Keep the repo's date convention; where it has none, don't include an "updated date" line.
 - The agent operating-context file (`AGENTS.md` or `CLAUDE.md`, whichever the repo's structure makes canonical) is produced separately at the `/ship-check` handoff step — it's instructions derived from these docs, not system documentation.
+
+## 中文执行导读
+
+本命令新增 `check` 模式：不写任何文件，按文档声明和代码执行点双侧引用，报告事实不一致、代码中存在但文档未记录的行为，以及未检查项；由仓库所有者决定修代码还是修文档。生成文档时先遵循宿主仓库的 agent 指令、文档目录、既有等价文档和日期约定，插件默认路径只作为兜底，并在输出中说明采用了哪一种。以上英文流程、字段、命令、路径和精确输出格式保持不变。

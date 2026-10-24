@@ -35,6 +35,10 @@ Execution and product management skills: PRDs, OKRs, roadmaps, sprints, pre-mort
 - `/pm-execution:write-prd` — Create a lean Product Requirements Document from a feature idea or problem statement, with a fuller spec on request.
 - `/pm-execution:write-stories` — Break a feature into backlog items — user stories, job stories, or WWA format with acceptance criteria.
 
+## 中文更新说明
+
+`create-prd` 与 `/write-prd` 默认生成 lean PRD，约 1–2 页，只保留足以支持首版决策的内容；详细版仅在用户要求时展开。首次只问用户才知道的关键缺口，最多一次三个问题，其余先研究公开资料。`Market Segment(s)` 和 `Value Proposition(s)` 始终保留，价值主张按 6-part JTBD 模板逐个细分市场填写。命令名、参数、字段和精确输出格式保持不变。
+
 ## Author
 
 Paweł Huryn — [The Product Compass Newsletter](https://www.productcompass.pm)

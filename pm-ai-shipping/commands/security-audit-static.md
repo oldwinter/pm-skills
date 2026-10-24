@@ -118,3 +118,7 @@ End with: the root-cause theme across findings; **what is well-built — say it 
 - This command covers security only. For over-fetching, indexes, and caching, use `/performance-audit-static`.
 - This is the specialised procedure behind the **code-review** skill's security sub-case. For logic and state defects, or for a review across several dimensions at once, use `/pm-ai-shipping:code-review`.
 - For an end-to-end pass that documents first and produces a shipping packet, use `/ship-check`.
+
+## 中文执行导读
+
+本命令现在支持只审计一次变更：传入 `<base>..<head>`、`changes`，或两者同时传入；范围包括改动文件及变更新触达或新影响的路径，已存在的缺陷仍会标记为 pre-existing。交叉核对 intended vs. implemented 时，按宿主仓库自己的文档位置读取系统文档；报告优先写入既有报告位置，只有没有约定时才使用 `reports/security_audit_{timestamp}.md`，写入仓库自有位置前先征得用户同意。以上英文流程、字段、命令、路径和精确输出格式保持不变。

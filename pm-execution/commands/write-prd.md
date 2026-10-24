@@ -71,3 +71,7 @@ Save the PRD as a markdown file to the user's workspace.
 - Success metrics must be specific: "improve NPS" is bad, "increase NPS from 32 to 45 within 90 days of launch" is good
 - Open questions should be genuinely unresolved — don't list things you can answer from context
 - If the user provides research, weave insights into the Background section with attribution
+
+## 中文执行导读
+
+`/write-prd` 默认生成 lean PRD：先提取输入中已有的问题、目标用户和成功指标，能从公开资料研究得到的不要追问；只有用户才知道的缺口最多一次问三个问题。正文约 1–2 页，足以支持首版决策；只有用户明确要求时才展开详细版。`Market Segment(s)` 与 `Value Proposition(s)` 必须保留，价值主张按 6-part JTBD 模板逐个细分市场填写；未知项放入 Solution 的 Assumptions and open questions，并在回复中用一行说明主动省略了什么。以上英文流程、字段、命令、路径和精确输出格式保持不变。

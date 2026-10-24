@@ -32,6 +32,10 @@ Install from the [pm-skills marketplace](https://github.com/phuryn/pm-skills) an
 - `/pm-ai-shipping:security-audit-static` — Static security audit: map trust boundaries, cross-reference documented intent, self-refute every finding, and report only evidence-backed risks. `/security-audit-static <base>..<head>` or `changes` audits only a change.
 - `/pm-ai-shipping:performance-audit-static` — Static performance audit: find N+1 queries and request waterfalls, over-fetching, missing indexes, and caching opportunities, ranked by effort and impact. `/performance-audit-static <base>..<head>` or `changes` audits only a change.
 
+## 中文更新说明
+
+本版本新增 `check` 模式与按变更范围审计：`/document-app check` 和 `/derive-tests check` 只读报告，不写文件；两个静态审计可接收 `<base>..<head>`、`changes` 或两者，并同时覆盖变更新触达的路径。文档、覆盖地图和报告优先使用宿主仓库自己的位置、文件名与门禁策略；插件默认路径只在仓库没有约定时使用。命令名、参数、字段和精确输出格式保持不变。
+
 ## Author
 
 Paweł Huryn — [The Product Compass Newsletter](https://www.productcompass.pm)

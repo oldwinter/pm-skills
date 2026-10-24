@@ -23,6 +23,8 @@ claude plugin marketplace add oldwinter/pm-skills
 codex plugin marketplace add oldwinter/pm-skills
 ```
 
+本次同步包含 lean PRD 工作流、`pm-ai-shipping` 的 `check` 模式与按变更范围审计，以及 9 个 plugin 的 Cursor manifests。英文详细说明见下文。
+
 ## Start Here
 
 These `/command`s need this fork's marketplace first (`oldwinter/pm-skills`). Install in [Installation](#installation), then:

@@ -152,3 +152,7 @@ Write the coverage map to the repo's existing coverage file, or `documentation/t
 - Don't fabricate rules to manufacture coverage. If the docs are silent, the gap is in the docs — fix `/document-app` first.
 - Don't wire external services into the default gate run, whatever the gate is; flaky live tests erode it until people start ignoring it.
 - Covers test derivation only. For the gap audit itself use `/security-audit-static`; for the full document → audit → test → packet sequence use `/ship-check`.
+
+## 中文执行导读
+
+本命令新增 `check` 模式：只读取现有覆盖地图、系统文档和测试，不改写文件，逐行报告过期条目、未覆盖项和未检查范围。生成或检查覆盖地图时，先遵循宿主仓库自己的文档目录、文件名和门禁策略；只有仓库没有约定时才使用 `documentation/tests.md`、`reports/` 和 green-before-merge CI。匹配既有覆盖地图要看内容，不能只凭文件名；不要覆盖只是同名的测试方法文档。以上英文流程、字段、命令、路径和精确输出格式保持不变。
