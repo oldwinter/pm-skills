@@ -1,14 +1,12 @@
 ![GitHub stars](https://img.shields.io/github/stars/phuryn/pm-skills)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](https://github.com/phuryn/pm-skills/blob/main/LICENSE)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square)](https://github.com/phuryn/pm-skills/blob/main/CONTRIBUTING.md)
 [![Tests](https://github.com/phuryn/pm-skills/actions/workflows/tests.yml/badge.svg)](https://github.com/phuryn/pm-skills/actions/workflows/tests.yml)
-[![Companion: pm-skills](https://img.shields.io/badge/companion-pm--brain-blue)](https://github.com/phuryn/pm-brain)
-[![Companion: burnstop](https://img.shields.io/badge/companion-burnstop-blue)](https://github.com/phuryn/burnstop)
-[![Companion: claude-usage](https://img.shields.io/badge/companion-claude--usage-blue)](https://github.com/phuryn/claude-usage)
+[![Companion: pm-brain](https://img.shields.io/badge/companion-pm--brain-blue)](https://github.com/phuryn/pm-brain)
+[![Companion: product-engineering](https://img.shields.io/badge/companion-product--engineering-blue)](https://github.com/phuryn/product-engineering)
 
 # PM Skills Marketplace: The AI Operating System for Better Product Decisions
 
-> 69 PM skills and 42 chained workflows across 9 plugins. Claude Code, Cowork, and more. From discovery to strategy, execution, launch, growth, and shipping AI-built code.
+> 72 PM skills and 42 chained workflows across 9 plugins. Claude Code, Cowork, and more. From discovery to strategy, execution, launch, growth, and shipping AI-built code.
 
 ![PM Skills marketplace: skills, commands, and all 9 plugins at a glance](.docs/images/plugins.png)
 
@@ -16,14 +14,14 @@ Designed for Claude Code and Cowork. Skills compatible with other AI assistants.
 
 ## 中文版安装（oldwinter fork）
 
-这是上游 `phuryn/pm-skills` 的中文化 fork。安装后，9 个 PM plugin 会从中文 fork 读取 69 个带中文执行导读的 `SKILL.md` runtime 入口。
+这是上游 `phuryn/pm-skills` 的中文化 fork。安装后，9 个 PM plugin 会从中文 fork 读取 72 个带中文执行导读的 `SKILL.md` runtime 入口。
 
 ```text
 claude plugin marketplace add oldwinter/pm-skills
 codex plugin marketplace add oldwinter/pm-skills
 ```
 
-本次同步包含 lean PRD 工作流、`pm-ai-shipping` 的 `check` 模式与按变更范围审计，以及 9 个 plugin 的 Cursor manifests。英文详细说明见下文。
+本次同步新增 `live-qa`、`live-polls`、`survey-design` 三个 skill，并为 `retro`、`pre-mortem`、`prioritization-frameworks`、`stakeholder-map`、`gtm-strategy` 补充匿名收集与现场投票的说明。`pm-ai-shipping` 已迁移到上游 `phuryn/product-engineering` 的 `ai-shipping` 插件，本仓库只保留迁移指引。英文详细说明见下文。
 
 ## Start Here
 
@@ -91,7 +89,9 @@ claude plugin install pm-data-analytics@pm-skills
 claude plugin install pm-marketing-growth@pm-skills
 claude plugin install pm-go-to-market@pm-skills
 claude plugin install pm-execution@pm-skills
-claude plugin install pm-ai-shipping@pm-skills
+
+# The AI Shipping Kit moved: claude plugin install ai-shipping@product-engineering
+# after: claude plugin marketplace add phuryn/product-engineering
 ```
 
 ### Codex CLI (OpenAI)
@@ -111,7 +111,9 @@ codex plugin add pm-data-analytics@pm-skills
 codex plugin add pm-marketing-growth@pm-skills
 codex plugin add pm-go-to-market@pm-skills
 codex plugin add pm-execution@pm-skills
-codex plugin add pm-ai-shipping@pm-skills
+
+# The AI Shipping Kit moved: codex plugin add ai-shipping@product-engineering
+# after: codex plugin marketplace add phuryn/product-engineering
 ```
 
 **What you get:** every skill (the PM frameworks), available to Codex and invocable by name. Install whole plugins rather than cherry-picking individual skills — a workflow usually relies on several skills that ship together.
@@ -249,11 +251,11 @@ Commands:
 </details>
 
 <details>
-<summary><strong>3. pm-execution</strong> — PRDs, OKRs, roadmaps, sprints, retros, release notes, stakeholder management (16 skills, 11 commands)</summary>
+<summary><strong>3. pm-execution</strong> — PRDs, OKRs, roadmaps, sprints, retros, release notes, stakeholder management, live Q&A and polls (18 skills, 11 commands)</summary>
 
-Day-to-day product management: PRDs, OKRs, roadmaps, sprints, retrospectives, release notes, pre-mortems, stakeholder management, user stories, and prioritization frameworks.
+Day-to-day product management: PRDs, OKRs, roadmaps, sprints, retrospectives, release notes, pre-mortems, stakeholder management, user stories, prioritization frameworks, and running live Q&A and polls.
 
-**Skills (16):**
+**Skills (18):**
 
 - `create-prd` — Lean 8-section PRD template (a fuller spec on request)
 - `brainstorm-okrs` — Team-level OKRs aligned with company objectives
@@ -271,6 +273,8 @@ Day-to-day product management: PRDs, OKRs, roadmaps, sprints, retrospectives, re
 - `dummy-dataset` — Realistic dummy datasets as CSV, JSON, SQL, or Python
 - `prioritization-frameworks` — Reference guide to 9 prioritization frameworks (Opportunity Score, ICE, RICE, MoSCoW, Kano, etc.)
 - `strategy-red-team` — Adversarial stress-test of a plan: surface load-bearing assumptions, name what would make each one fail, and rank by cheapest test
+- `live-qa` — Audience Q&A for all-hands, AMAs, webinars and launches: moderated, answered, and every open question followed up (AskOne by default, made by this collection's author)
+- `live-polls` — Polls, dot-voting, confidence votes, word clouds and quizzes in meetings and workshops, collected before the discussion (AskOne by default, made by this collection's author)
 
 **Commands (11):**
 
@@ -301,11 +305,11 @@ Commands:
 </details>
 
 <details>
-<summary><strong>4. pm-market-research</strong> — Personas, segmentation, journey maps, market sizing, competitor analysis (7 skills, 3 commands)</summary>
+<summary><strong>4. pm-market-research</strong> — Personas, segmentation, journey maps, market sizing, competitor analysis, surveys (8 skills, 3 commands)</summary>
 
-User research and competitive analysis: personas, segmentation, journey maps, market sizing, competitor analysis, and feedback analysis.
+User research and competitive analysis: personas, segmentation, journey maps, market sizing, competitor analysis, feedback analysis, and survey design.
 
-**Skills (7):**
+**Skills (8):**
 
 - `user-personas` — Create refined user personas from research data
 - `market-segments` — Identify 3–5 customer segments with demographics, JTBD, and product fit
@@ -314,6 +318,7 @@ User research and competitive analysis: personas, segmentation, journey maps, ma
 - `market-sizing` — TAM, SAM, SOM with top-down and bottom-up approaches
 - `competitor-analysis` — Competitor strengths, weaknesses, and differentiation opportunities
 - `sentiment-analysis` — Sentiment analysis and theme extraction from user feedback
+- `survey-design` — Surveys that inform a decision: research questions first, unbiased questions, a pilot, and an honest sample
 
 **Commands (3):**
 
@@ -464,34 +469,9 @@ Commands:
 </details>
 
 <details>
-<summary><strong>9. pm-ai-shipping</strong> — AI Shipping Kit: document a vibe-coded app, review it for correctness, security and performance defects, map test coverage, compile a shipping packet (3 skills, 5 commands)</summary>
+<summary><strong>9. pm-ai-shipping</strong> — Moved to phuryn/product-engineering, which maintains the AI Shipping Kit in its ai-shipping plugin; the skills and commands here only say where each one went. (3 skills, 5 commands)</summary>
 
-For PMs and founders accountable for AI-built code. AI agents write code fast but leave no record of *intent* — what the system should do, who may do what, where the secrets live, which rules are actually verified. This kit restores reviewability: it documents the system, then audits the gap between what the docs say and what the code actually does — the class of bug generic scanners miss.
-
-**Skills (2):**
-
-- `shipping-artifacts` — The durable documentation set that makes an AI-built app reviewable: a core every app needs (architecture, user/permission flows, permissions, variables/secrets, test-coverage map) plus conditional docs added only when they apply (emails, cron, SEO, embedded agents/automation). Defines what each doc must capture and how a reviewer uses it
-- `intended-vs-implemented` — The method for finding the gap between what a system is documented to do and what the code actually does, with cited evidence on both sides
-
-**Commands (5):**
-
-- `/ship-check` — Turn a vibe-coded repo into a reviewer-ready shipping packet: document, wire agent context, run security and performance audits, map test coverage, and compile the results
-- `/document-app` — Reverse-engineer a codebase into the system documents reviewers and auditors need — a core set (architecture, flows, permissions, variables) plus conditional docs (emails, cron, SEO, automation) when they apply; `check` writes nothing and reports where existing docs and code disagree
-- `/derive-tests` — Turn documented intent into a test-coverage map: inventory the tests that exist today, separate them from proposed tests and unverified gaps, and recommend a gate that follows the repo's stated gate policy (a green-before-merge CI gate where it states none); `check` writes nothing and reports where the map is stale
-- `/security-audit-static` — Static security audit: map trust boundaries, cross-reference documented intent, self-refute every finding, and report only evidence-backed risks; a git range or `changes` audits only a change
-- `/performance-audit-static` — Static performance audit: find N+1 queries and request waterfalls, over-fetching, missing indexes, and caching opportunities, ranked by effort and impact; a git range or `changes` audits only a change
-
-**Examples:**
-
-Skills:
-- `What documentation does my Supabase app need before someone can review it?`
-- `Where does what this code does diverge from what the docs say it should do?`
-
-Commands:
-- `/ship-check the payments service`
-- `/document-app — Reverse-engineer the system docs for this repo`
-- `/derive-tests — Which documented rules have no test yet?`
-- `/security-audit-static src/api`
+The AI Shipping Kit is maintained in [phuryn/product-engineering](https://github.com/phuryn/product-engineering), in its `ai-shipping` plugin. The skills and commands here keep their names and only say where each one went. Install it there: [product-engineering's README](https://github.com/phuryn/product-engineering#install).
 
 </details>
 

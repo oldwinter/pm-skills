@@ -83,6 +83,7 @@ A pre-mortem is a structured risk-identification exercise that forces teams to t
 - Be honest and constructive—the goal is to improve launch readiness, not assign blame
 - Default to "Tiger" if unsure; it's better to address risks early
 - Involve cross-functional perspectives (engineering, design, go-to-market) in your analysis
+- Elephants come out only when people can raise them without their name attached. With the team, collect risks anonymously before discussing them: a live Q&A room where people write risks and upvote each other's ranks the most widely shared worry first (the live-qa skill)
 - Revisit the pre-mortem 2-3 weeks before launch to verify mitigations are on track
 
 ---
@@ -98,3 +99,5 @@ A pre-mortem is a structured risk-identification exercise that forces teams to t
 中文产品管理请求命中本 skill 时，先确认目标产出和适用的 PM framework，再按下方上游流程执行。输出说明使用简体中文；framework 名称、公式、字段、命令、路径、模板结构、引用和代码保持原样，法律与合规内容不替代专业意见。
 
 # Pre-Mortem: Risk Analysis for Product Launch
+
+本次上游补充：只有让人可以不带名字地提出顾虑，真正的风险才会被说出来。与团队一起做时，先匿名收集风险再讨论：用现场问答房间让人写下风险并互相投票，得票最高的就是最普遍的担忧（见 `live-qa`）。

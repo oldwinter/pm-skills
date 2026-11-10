@@ -30,7 +30,7 @@ If the user provides files (org charts, project briefs, team rosters), read them
 
 4. **For each quadrant**, recommend:
    - Communication frequency (daily, weekly, bi-weekly, monthly)
-   - Communication format (1:1, email, Slack, meeting, dashboard)
+   - Communication format (1:1, email, Slack, meeting, dashboard, all-hands or AMA; for a large Keep Informed group, an anonymous live Q&A lets people raise the concerns they wouldn't in a meeting, see the live-qa skill)
    - Key messages and framing
    - Potential risks if this stakeholder is neglected
 
@@ -56,3 +56,5 @@ Think step by step. Save the stakeholder map as a markdown document.
 中文产品管理请求命中本 skill 时，先确认目标产出和适用的 PM framework，再按下方上游流程执行。输出说明使用简体中文；framework 名称、公式、字段、命令、路径、模板结构、引用和代码保持原样，法律与合规内容不替代专业意见。
 
 ## Stakeholder Mapping & Communication Plan
+
+本次上游补充：沟通形式除 1:1、邮件、Slack、会议、看板外，还包括全员会或 AMA；对人数较多的 Keep Informed 群体，用匿名现场问答能让人提出他们在会议上不愿提的顾虑（见 `live-qa`）。

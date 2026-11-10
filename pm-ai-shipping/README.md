@@ -1,45 +1,35 @@
-# pm-ai-shipping — AI Shipping Kit
+# pm-ai-shipping — moved to product-engineering
 
-For PMs and founders accountable for AI-built code. Document a vibe-coded app, review it for correctness, security and performance defects, and produce a reviewer-ready shipping packet.
+The AI Shipping Kit is maintained in [phuryn/product-engineering](https://github.com/phuryn/product-engineering), in its `ai-shipping` plugin, with the release gate, the test harness and the independent review it grew into. Each skill and command here keeps its name and only says where it went, so an agent that loads one can tell you.
 
-## Overview
+## Install it there
 
-AI agents write code fast but leave no record of *intent* — what the system should do, who may do what, where the secrets live. Without that record, no human and no auditing agent can tell whether the code is safe to ship. This kit restores reviewability: it documents the system, then audits the gap between what the docs say and what the code does — the class of bug generic scanners miss because they have no model of intent.
+```bash
+claude plugin marketplace add phuryn/product-engineering
+claude plugin install ai-shipping@product-engineering
+```
 
-Start with `/ship-check` for the full sequence, or run a single stage with the specialist commands.
-
-Folders and file names are defaults. The kit follows the repo's own setup — its agent instructions, its docs folder, and the documents and test-coverage file it already has — and falls back to `documentation/`, `documentation/tests.md` and `reports/` only where the repo has none, saying so in its output.
-
-The two static audits take a git range (`<base>..<head>`, such as a release's unreleased commits) or `changes` (the uncommitted working tree) and then audit only the change: the changed files plus what the change makes newly reachable or newly wrong elsewhere. A release normally audits only its changes; audit the whole repository for the first release, or after a large refactor.
-
-For a repo that keeps its docs and coverage map by hand as intent, `/document-app check` and `/derive-tests check` are the release-time form: they write no file, list each disagreement with `file:line` on both sides, leave the owner to decide whether the code or the doc is wrong, and end with a one-line summary a release checklist can cite.
-
-## Install
-
-Install from the [pm-skills marketplace](https://github.com/phuryn/pm-skills) and enable the `pm-ai-shipping` plugin. Each command can be triggered with `/pm-ai-shipping:<command>` or its short `/<command>` form; skills auto-load when the topic matches.
+Then turn off `pm-ai-shipping` here, so the two don't load side by side. Other agents: [the repository's README](https://github.com/phuryn/product-engineering#install).
 
 ## Skills (3)
 
-- **shipping-artifacts** — The durable documentation set that makes an AI-built app reviewable: a core every app needs (architecture, user/permission flows, permissions, variables/secrets, test-coverage map) plus conditional docs added only when they apply (emails, cron, SEO, embedded agents/automation). Defines what each doc must capture and how a reviewer uses it.
-- **code-review** — The top-level review skill. Correctness is its core; **performance and security are optional sub-cases** of the same engine. Anchors on agreements between participants across a boundary — the defects that are invisible file-by-file because each side looks reasonable alone — forces a violating execution, and refutes every candidate before reporting.
-- **intended-vs-implemented** — The method for finding the gap between what a system is documented to do and what the code actually does, with cited evidence on both sides and without hand-wavy findings.
+- [`code-review`](https://github.com/phuryn/product-engineering/tree/main/ai-shipping/skills/code-review)
+- [`intended-vs-implemented`](https://github.com/phuryn/product-engineering/tree/main/ai-shipping/skills/intended-vs-implemented)
+- [`shipping-artifacts`](https://github.com/phuryn/product-engineering/tree/main/ai-shipping/skills/shipping-artifacts)
 
 ## Commands (5)
 
-- `/pm-ai-shipping:ship-check` — Turn a vibe-coded repo into a reviewer-ready shipping packet: document, wire agent context, run correctness, security and performance reviews, add an independent unsteered pass by a second model, map test coverage, and compile the results.
-- `/pm-ai-shipping:document-app` — Reverse-engineer a codebase into the system documents reviewers and auditors need — a core set (architecture, flows, permissions, variables) plus conditional docs (emails, cron, SEO, automation) when they apply. `/document-app check` writes nothing and reports where the existing docs and the code disagree.
-- `/pm-ai-shipping:derive-tests` — Turn documented intent into a test-coverage map: inventory the tests that exist today, separate them from proposed tests and unverified gaps, mark each unit / guarded-live / manual, and recommend a gate that follows the repo's stated gate policy (a green-before-merge CI gate where it states none). `/derive-tests check` writes nothing and reports where the coverage map is stale against the docs and the test suite.
-- `/pm-ai-shipping:security-audit-static` — Static security audit: map trust boundaries, cross-reference documented intent, self-refute every finding, and report only evidence-backed risks. `/security-audit-static <base>..<head>` or `changes` audits only a change.
-- `/pm-ai-shipping:performance-audit-static` — Static performance audit: find N+1 queries and request waterfalls, over-fetching, missing indexes, and caching opportunities, ranked by effort and impact. `/performance-audit-static <base>..<head>` or `changes` audits only a change.
+- `/ship-check`, now the [`ship-check`](https://github.com/phuryn/product-engineering/tree/main/ai-shipping/skills/ship-check) skill
+- `/document-app`, now the [`document-app`](https://github.com/phuryn/product-engineering/tree/main/ai-shipping/skills/document-app) skill
+- `/derive-tests`, now the [`derive-tests`](https://github.com/phuryn/product-engineering/tree/main/ai-shipping/skills/derive-tests) skill
+- `/security-audit-static`, now the [`security-audit-static`](https://github.com/phuryn/product-engineering/tree/main/ai-shipping/skills/security-audit-static) skill
+- `/performance-audit-static`, now the [`performance-audit-static`](https://github.com/phuryn/product-engineering/tree/main/ai-shipping/skills/performance-audit-static) skill
 
-## 中文更新说明
+## 中文说明
 
-本版本新增 `check` 模式与按变更范围审计：`/document-app check` 和 `/derive-tests check` 只读报告，不写文件；两个静态审计可接收 `<base>..<head>`、`changes` 或两者，并同时覆盖变更新触达的路径。文档、覆盖地图和报告优先使用宿主仓库自己的位置、文件名与门禁策略；插件默认路径只在仓库没有约定时使用。命令名、参数、字段和精确输出格式保持不变。
+本插件已迁移到 [phuryn/product-engineering](https://github.com/phuryn/product-engineering) 的 `ai-shipping` 插件维护，本仓库只保留迁移指引，不再包含可执行内容。安装上游插件后请关闭本仓库的 `pm-ai-shipping`，避免两份同时加载：
 
-## Author
-
-Paweł Huryn — [The Product Compass Newsletter](https://www.productcompass.pm)
-
-## License
-
-MIT
+```bash
+claude plugin marketplace add phuryn/product-engineering
+claude plugin install ai-shipping@product-engineering
+```

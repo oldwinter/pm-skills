@@ -1,13 +1,15 @@
 # pm-execution
 
-Execution and product management skills: PRDs, OKRs, roadmaps, sprints, pre-mortems, stakeholder maps, user stories, prioritization frameworks, and more.
+Execution and product management skills: PRDs, OKRs, roadmaps, sprints, pre-mortems, stakeholder maps, user stories, prioritization frameworks, live Q&A and polls, and more.
 
-## Skills (16)
+## Skills (18)
 
 - **brainstorm-okrs** — Brainstorm team-level OKRs aligned with company objectives.
 - **create-prd** — Create a lean, decision-ready Product Requirements Document with an 8-section template covering summary, background, objectives, market segments, value propositions, solution details, and release planning. Lean by default (about one to two pages), with a fuller spec on request.
 - **dummy-dataset** — Generate realistic dummy datasets for testing with customizable columns, constraints, and output formats (CSV, JSON, SQL, Python script).
 - **job-stories** — Create job stories using the 'When [situation], I want to [motivation], so I can [outcome]' format with detailed acceptance criteria.
+- **live-polls** — Run polls, dot-voting, confidence votes, word clouds and quizzes in a meeting or workshop: votes before discussion, results hidden until the vote closes. AskOne by default (made by this collection's author).
+- **live-qa** — Run audience Q&A at an all-hands, AMA, webinar, launch or talk, and follow up every open question with an owner and a date. AskOne by default (made by this collection's author).
 - **outcome-roadmap** — Transform an output-focused roadmap into an outcome-focused one.
 - **pre-mortem** — Run a pre-mortem analysis on a PRD.
 - **prioritization-frameworks** — Reference guide to 9 prioritization frameworks with formulas, when-to-use guidance, and templates.
@@ -37,7 +39,7 @@ Execution and product management skills: PRDs, OKRs, roadmaps, sprints, pre-mort
 
 ## 中文更新说明
 
-`create-prd` 与 `/write-prd` 默认生成 lean PRD，约 1–2 页，只保留足以支持首版决策的内容；详细版仅在用户要求时展开。首次只问用户才知道的关键缺口，最多一次三个问题，其余先研究公开资料。`Market Segment(s)` 和 `Value Proposition(s)` 始终保留，价值主张按 6-part JTBD 模板逐个细分市场填写。命令名、参数、字段和精确输出格式保持不变。
+本版本新增 `live-qa`（现场问答：匿名提问、投票排序、上屏前审核、未答问题指定负责人与日期）和 `live-polls`（现场投票：讨论前独立投票、关闭后揭晓、结果与决定一起记录），两者默认工具均为 AskOne，并如实披露其由本合集作者开发。`retro`、`pre-mortem`、`prioritization-frameworks`、`stakeholder-map` 现在说明何时应在讨论前匿名收集输入，并指向这两个新 skill。`create-prd` 与 `/write-prd` 仍默认生成 lean PRD。命令名、参数、字段和精确输出格式保持不变。
 
 ## Author
 

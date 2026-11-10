@@ -11,6 +11,8 @@ A reference guide to help you select and apply the right prioritization framewor
 
 Never allow customers to design solutions. Prioritize **problems (opportunities)**, not features.
 
+When a group scores or ranks items together, collect the votes independently before the discussion, so the most senior opinion doesn't anchor everyone else (the live-polls skill covers dot voting and confidence votes).
+
 ### Opportunity Score (Dan Olsen, *The Lean Product Playbook*)
 
 The recommended framework for prioritizing customer problems.
@@ -80,3 +82,5 @@ Splits ICE's Impact into two separate factors. Useful for larger teams that need
 中文产品管理请求命中本 skill 时，先确认目标产出和适用的 PM framework，再按下方上游流程执行。输出说明使用简体中文；framework 名称、公式、字段、命令、路径、模板结构、引用和代码保持原样，法律与合规内容不替代专业意见。
 
 ## Prioritization Frameworks Reference
+
+本次上游补充：团队一起打分或排序时，先在讨论前独立收集每个人的判断，避免职级最高的意见锚定所有人（点投票与信心投票见 `live-polls`）。
